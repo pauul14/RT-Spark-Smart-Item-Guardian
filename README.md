@@ -1,5 +1,7 @@
 # Smart Item Guardian
 
+Repository: [pauul14/RT-Spark-Smart-Item-Guardian](https://github.com/pauul14/RT-Spark-Smart-Item-Guardian).
+
 A **handheld handling-warning prototype** built on the RT-Thread **RT-Spark** (STM32F407ZGT6). It classifies **STATIONARY / NORMAL_HANDLING / ROUGH_HANDLING** on the MCU with a compact decision tree and warns immediately on the LCD, LED matrix, LEDs and buzzer. An alert is acknowledged with the DOWN key or **touchlessly** by holding a hand over the AP3216C proximity sensor (a deliberate, one-shot gesture). It runs with no network at all.
 
 > **No enclosure.** The prototype is the bare board. It has **not** been validated mounted to or inside an item (box, bag, case). All recordings were made with the bare board held by hand. The earlier box/lid concept and lid detection were removed on 2026-11-18.

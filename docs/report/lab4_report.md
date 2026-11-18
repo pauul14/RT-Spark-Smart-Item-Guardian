@@ -192,7 +192,7 @@ Set-up: handheld prototype, bare board, no enclosure, not mounted to an item; fi
 | RTC backup-battery retention | not tested |
 | mounted / enclosed use | not validated (handheld prototype only) |
 | demonstration video / live demonstration with network disabled | not yet recorded (script: `docs/demo_procedure.md`) |
-| public GitHub repository with commit history | not yet published |
+| public GitHub repository with commit history | **published** after student approval: [pauul14/RT-Spark-Smart-Item-Guardian](https://github.com/pauul14/RT-Spark-Smart-Item-Guardian), [commit history](https://github.com/pauul14/RT-Spark-Smart-Item-Guardian/commits/main); local and remote `main` verified equal |
 | licence | no project-level licence selected; unapproved MIT proposal omitted from publication; third-party licences retained |
 | student details, individual/group arrangement | to be filled by the student |
 

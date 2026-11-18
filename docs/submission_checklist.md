@@ -78,16 +78,16 @@ Failed product targets are kept in the report, not removed: A1 16/20 alerts insi
 | repository content: source, platformio.ini, board manifest, FreeRTOS config, drivers, build/flash steps, troubleshooting | met (`README.md`) |
 | licence / attribution | original-code licence status documented: **not selected**; no unapproved MIT licence is published. Third-party licences and attribution remain in `ATTRIBUTION.md` |
 | no passwords, API keys, personal data | met for tracked content: host profile paths redacted in evidence; `.vscode/` and flash backups git-ignored; operator ids anonymous |
-| **public GitHub repository with meaningful commit history** | **open** (item 1) |
+| **public GitHub repository with meaningful commit history** | **met**: [public repository](https://github.com/pauul14/RT-Spark-Smart-Item-Guardian), [commit history](https://github.com/pauul14/RT-Spark-Smart-Item-Guardian/commits/main); published after student approval under `pauul14`, with no AI co-author trailers |
 | laboratory report | met: `docs/report/lab4_report.md` (student details still blank, item 5) |
 | data manifest + anonymised data + model artifacts + training config | met |
 | evidence of build/upload, scheduler, diagnostics, inference, metrics, memory, latency, offline | met (offline with the deviation noted) |
 | demonstration video or live demonstration with the network disabled | **open** (item 2), script in `docs/demo_procedure.md` |
 
-## Remaining items (only these)
+## Submission closeout status
 
-### Student actions
-1. **Publish** the public GitHub repository with a meaningful commit history (to be done by Codex after the student's approval; nothing has been staged or committed).
+### Student actions and publication status
+1. **Publication complete:** the reviewed source, data, model, documentation and evidence are published at [pauul14/RT-Spark-Smart-Item-Guardian](https://github.com/pauul14/RT-Spark-Smart-Item-Guardian). Local and remote `main` were verified equal. Commits use `pauul14` and its GitHub no-reply address; there are no AI co-author trailers. Private flash backups, vendor PDFs/images and CLAUDE.md files are excluded.
 2. **Record the demonstration** (video or live) per `docs/demo_procedure.md`, with all PC network adapters visibly disabled. This also provides the network-removed check that the final run did not fully demonstrate.
 3. **Confirm the LED matrix and LEDs visually** during the demonstration (`diag matrix`, `diag leds`), and note it in the report §2 only after it has been observed.
 4. **Licence status:** no project-level licence has been selected; MIT was proposed but not approved and is not published. A later licence choice is optional; third-party licences remain intact.
