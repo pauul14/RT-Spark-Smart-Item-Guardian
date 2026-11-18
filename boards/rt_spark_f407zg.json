@@ -1,0 +1,44 @@
+{
+  "build": {
+    "core": "stm32",
+    "cpu": "cortex-m4",
+    "extra_flags": "-DSTM32F4 -DSTM32F407xx -DHSE_VALUE=8000000U -DLSE_VALUE=32768U -DRT_SPARK_HW_REV=0x11",
+    "f_cpu": "168000000L",
+    "hwids": [
+      ["0x0483", "0x374B"]
+    ],
+    "mcu": "stm32f407zgt6",
+    "product_line": "STM32F407xx",
+    "stm32cube": {
+      "custom_config_header": "yes"
+    }
+  },
+  "connectivity": [
+    "can"
+  ],
+  "debug": {
+    "default_tools": [
+      "stlink"
+    ],
+    "jlink_device": "STM32F407ZG",
+    "onboard_tools": [
+      "stlink"
+    ],
+    "openocd_target": "stm32f4x",
+    "svd_path": "STM32F40x.svd"
+  },
+  "frameworks": [
+    "stm32cube"
+  ],
+  "name": "RT-Thread RT-Spark (Spark-1, HW1.1) STM32F407ZGT6",
+  "upload": {
+    "maximum_ram_size": 131072,
+    "maximum_size": 1048576,
+    "protocol": "stlink",
+    "protocols": [
+      "stlink"
+    ]
+  },
+  "url": "https://github.com/RT-Thread-Studio/sdk-bsp-stm32f407-spark",
+  "vendor": "RT-Thread"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "FreeRTOS-Kernel",
+  "version": "10.3.1",
+  "description": "FreeRTOS kernel V10.3.1 (MIT) vendored from STM32CubeF4 1.28.1 Middlewares/Third_Party/FreeRTOS/Source. Port: GCC/ARM_CM4F, heap: heap_4. Configuration comes from the project's include/FreeRTOSConfig.h.",
+  "license": "MIT",
+  "frameworks": "stm32cube",
+  "platforms": "ststm32",
+  "build": {
+    "includeDir": "include",
+    "srcDir": "src",
+    "srcFilter": [
+      "+<*.c>",
+      "+<portable/GCC/ARM_CM4F/port.c>",
+      "+<portable/MemMang/heap_4.c>"
+    ]
+  }
+}

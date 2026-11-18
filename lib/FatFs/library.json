@@ -1,0 +1,12 @@
+{
+  "name": "FatFs",
+  "version": "0.12.3",
+  "description": "ChaN FatFs R0.12c (BSD-style 1-clause licence) vendored unmodified from STM32CubeF4 1.28.1 Middlewares/Third_Party/FatFs/src (ff.c, ff.h, integer.h, diskio.h). Configuration: include/ffconf.h. Disk I/O: src/drivers/sd_card.c.",
+  "license": "BSD-1-Clause",
+  "frameworks": "stm32cube",
+  "platforms": "ststm32",
+  "build": {
+    "includeDir": "include",
+    "srcDir": "src"
+  }
+}
