@@ -1,0 +1,12 @@
+{
+ "_comment": "SYNTHETIC placeholder split - not board data",
+ "train_sessions": [
+  "SYN01",
+  "SYN02",
+  "SYN03"
+ ],
+ "test_sessions": [
+  "SYN04"
+ ],
+ "final_trial_sessions": []
+}

@@ -1,0 +1,1193 @@
+{
+ "model_id": "dt-d8b2af7075",
+ "placeholder": false,
+ "synthetic_data": false,
+ "requirements": {
+  "train_windows_per_class": [
+   66,
+   33,
+   46
+  ],
+  "test_windows_per_class": [
+   22,
+   11,
+   14
+  ],
+  "train_min_required": 30,
+  "test_min_required": 10,
+  "train_ok": true,
+  "test_ok": true,
+  "train_sessions": [
+   "S01",
+   "S02",
+   "S03"
+  ],
+  "test_sessions": [
+   "S04"
+  ],
+  "session_overlap": [],
+  "unused_sessions": []
+ },
+ "cv": [
+  {
+   "max_depth": 2,
+   "min_samples_leaf": 2,
+   "cv_macro_f1": 0.8288396274507385,
+   "cv_pooled_macro_f1": 0.8393071720396884,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.860576923076923,
+     "accuracy": 0.8823529411764706,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.8428731762065097,
+     "accuracy": 0.8653846153846154,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7830687830687829,
+     "accuracy": 0.8571428571428571,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 2,
+   "min_samples_leaf": 4,
+   "cv_macro_f1": 0.8288396274507385,
+   "cv_pooled_macro_f1": 0.8393071720396884,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.860576923076923,
+     "accuracy": 0.8823529411764706,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.8428731762065097,
+     "accuracy": 0.8653846153846154,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7830687830687829,
+     "accuracy": 0.8571428571428571,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 2,
+   "min_samples_leaf": 8,
+   "cv_macro_f1": 0.8288396274507385,
+   "cv_pooled_macro_f1": 0.8393071720396884,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.860576923076923,
+     "accuracy": 0.8823529411764706,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.8428731762065097,
+     "accuracy": 0.8653846153846154,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7830687830687829,
+     "accuracy": 0.8571428571428571,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 3,
+   "min_samples_leaf": 2,
+   "cv_macro_f1": 0.831088737801171,
+   "cv_pooled_macro_f1": 0.8527506886026949,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.8799171842650103,
+     "accuracy": 0.9019607843137255,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.9043062200956937,
+     "accuracy": 0.9230769230769231,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7090428090428089,
+     "accuracy": 0.8333333333333334,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 3,
+   "min_samples_leaf": 4,
+   "cv_macro_f1": 0.831088737801171,
+   "cv_pooled_macro_f1": 0.8527506886026949,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.8799171842650103,
+     "accuracy": 0.9019607843137255,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.9043062200956937,
+     "accuracy": 0.9230769230769231,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7090428090428089,
+     "accuracy": 0.8333333333333334,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 3,
+   "min_samples_leaf": 8,
+   "cv_macro_f1": 0.8106110565047763,
+   "cv_pooled_macro_f1": 0.8311685977238178,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.8799171842650103,
+     "accuracy": 0.9019607843137255,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.8428731762065097,
+     "accuracy": 0.8653846153846154,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7090428090428089,
+     "accuracy": 0.8333333333333334,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 4,
+   "min_samples_leaf": 2,
+   "cv_macro_f1": 0.8247287691732136,
+   "cv_pooled_macro_f1": 0.849042003916896,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.8828282828282829,
+     "accuracy": 0.9019607843137255,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.9074074074074074,
+     "accuracy": 0.9230769230769231,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.6839506172839506,
+     "accuracy": 0.8095238095238095,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 4,
+   "min_samples_leaf": 4,
+   "cv_macro_f1": 0.8742134637903471,
+   "cv_pooled_macro_f1": 0.8832310801216114,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.9052287581699346,
+     "accuracy": 0.9215686274509803,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.9043062200956937,
+     "accuracy": 0.9230769230769231,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.8131054131054131,
+     "accuracy": 0.8809523809523809,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 4,
+   "min_samples_leaf": 8,
+   "cv_macro_f1": 0.8106110565047763,
+   "cv_pooled_macro_f1": 0.8311685977238178,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.8799171842650103,
+     "accuracy": 0.9019607843137255,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.8428731762065097,
+     "accuracy": 0.8653846153846154,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7090428090428089,
+     "accuracy": 0.8333333333333334,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 5,
+   "min_samples_leaf": 2,
+   "cv_macro_f1": 0.8584664427801681,
+   "cv_pooled_macro_f1": 0.8698460197316032,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.8828282828282829,
+     "accuracy": 0.9019607843137255,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.9095022624434389,
+     "accuracy": 0.9230769230769231,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7830687830687829,
+     "accuracy": 0.8571428571428571,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 5,
+   "min_samples_leaf": 4,
+   "cv_macro_f1": 0.8642012537781371,
+   "cv_pooled_macro_f1": 0.8750424170391615,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.9052287581699346,
+     "accuracy": 0.9215686274509803,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.9043062200956937,
+     "accuracy": 0.9230769230769231,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7830687830687829,
+     "accuracy": 0.8571428571428571,
+     "n": 42
+    }
+   ]
+  },
+  {
+   "max_depth": 5,
+   "min_samples_leaf": 8,
+   "cv_macro_f1": 0.8106110565047763,
+   "cv_pooled_macro_f1": 0.8311685977238178,
+   "folds": [
+    {
+     "held_out_session": "S01",
+     "macro_f1": 0.8799171842650103,
+     "accuracy": 0.9019607843137255,
+     "n": 51
+    },
+    {
+     "held_out_session": "S02",
+     "macro_f1": 0.8428731762065097,
+     "accuracy": 0.8653846153846154,
+     "n": 52
+    },
+    {
+     "held_out_session": "S03",
+     "macro_f1": 0.7090428090428089,
+     "accuracy": 0.8333333333333334,
+     "n": 42
+    }
+   ]
+  }
+ ],
+ "train": {
+  "tree": {
+   "confusion": [
+    [
+     66,
+     0,
+     0
+    ],
+    [
+     0,
+     29,
+     4
+    ],
+    [
+     0,
+     4,
+     42
+    ]
+   ],
+   "per_class": [
+    {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 66
+    },
+    {
+     "precision": 0.8787878787878788,
+     "recall": 0.8787878787878788,
+     "f1": 0.8787878787878788,
+     "support": 33
+    },
+    {
+     "precision": 0.9130434782608695,
+     "recall": 0.9130434782608695,
+     "f1": 0.9130434782608695,
+     "support": 46
+    }
+   ],
+   "accuracy": 0.9448275862068966,
+   "macro_f1": 0.9306104523495828,
+   "n": 145
+  },
+  "baseline": {
+   "confusion": [
+    [
+     66,
+     0,
+     0
+    ],
+    [
+     2,
+     7,
+     24
+    ],
+    [
+     4,
+     8,
+     34
+    ]
+   ],
+   "per_class": [
+    {
+     "precision": 0.9166666666666666,
+     "recall": 1.0,
+     "f1": 0.9565217391304348,
+     "support": 66
+    },
+    {
+     "precision": 0.4666666666666667,
+     "recall": 0.21212121212121213,
+     "f1": 0.29166666666666663,
+     "support": 33
+    },
+    {
+     "precision": 0.5862068965517241,
+     "recall": 0.7391304347826086,
+     "f1": 0.6538461538461539,
+     "support": 46
+    }
+   ],
+   "accuracy": 0.7379310344827587,
+   "macro_f1": 0.6340115198810851,
+   "n": 145
+  }
+ },
+ "test": {
+  "tree": {
+   "confusion": [
+    [
+     22,
+     0,
+     0
+    ],
+    [
+     0,
+     6,
+     5
+    ],
+    [
+     0,
+     0,
+     14
+    ]
+   ],
+   "per_class": [
+    {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "support": 22
+    },
+    {
+     "precision": 1.0,
+     "recall": 0.5454545454545454,
+     "f1": 0.7058823529411764,
+     "support": 11
+    },
+    {
+     "precision": 0.7368421052631579,
+     "recall": 1.0,
+     "f1": 0.8484848484848484,
+     "support": 14
+    }
+   ],
+   "accuracy": 0.8936170212765957,
+   "macro_f1": 0.8514557338086749,
+   "n": 47
+  },
+  "baseline": {
+   "confusion": [
+    [
+     22,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     10
+    ],
+    [
+     3,
+     0,
+     11
+    ]
+   ],
+   "per_class": [
+    {
+     "precision": 0.88,
+     "recall": 1.0,
+     "f1": 0.9361702127659575,
+     "support": 22
+    },
+    {
+     "precision": 1.0,
+     "recall": 0.09090909090909091,
+     "f1": 0.16666666666666669,
+     "support": 11
+    },
+    {
+     "precision": 0.5238095238095238,
+     "recall": 0.7857142857142857,
+     "f1": 0.6285714285714286,
+     "support": 14
+    }
+   ],
+   "accuracy": 0.723404255319149,
+   "macro_f1": 0.5771361026680176,
+   "n": 47
+  }
+ },
+ "test_uncleaned": {
+  "tree": {
+   "confusion": [
+    [
+     22,
+     0,
+     0
+    ],
+    [
+     11,
+     6,
+     5
+    ],
+    [
+     8,
+     0,
+     14
+    ]
+   ],
+   "per_class": [
+    {
+     "precision": 0.5365853658536586,
+     "recall": 1.0,
+     "f1": 0.6984126984126985,
+     "support": 22
+    },
+    {
+     "precision": 1.0,
+     "recall": 0.2727272727272727,
+     "f1": 0.42857142857142855,
+     "support": 22
+    },
+    {
+     "precision": 0.7368421052631579,
+     "recall": 0.6363636363636364,
+     "f1": 0.6829268292682926,
+     "support": 22
+    }
+   ],
+   "accuracy": 0.6363636363636364,
+   "macro_f1": 0.6033036520841398,
+   "n": 66
+  },
+  "baseline": {
+   "confusion": [
+    [
+     22,
+     0,
+     0
+    ],
+    [
+     11,
+     1,
+     10
+    ],
+    [
+     11,
+     0,
+     11
+    ]
+   ],
+   "per_class": [
+    {
+     "precision": 0.5,
+     "recall": 1.0,
+     "f1": 0.6666666666666666,
+     "support": 22
+    },
+    {
+     "precision": 1.0,
+     "recall": 0.045454545454545456,
+     "f1": 0.08695652173913045,
+     "support": 22
+    },
+    {
+     "precision": 0.5238095238095238,
+     "recall": 0.5,
+     "f1": 0.5116279069767442,
+     "support": 22
+    }
+   ],
+   "accuracy": 0.5151515151515151,
+   "macro_f1": 0.4217503651275138,
+   "n": 66
+  }
+ },
+ "label_consistency": {
+  "rule": "handling window kept if gyro_max > T_g or acc_std > T_a (T from training STATIONARY maxima)",
+  "thresholds": {
+   "gyro_max_dps": 2.11005,
+   "acc_std_g": 0.01149
+  },
+  "excluded_windows": 72,
+  "per_trial": {
+   "S01/NORMAL_HANDLING_01": {
+    "label": 1,
+    "windows": 11,
+    "active": 6
+   },
+   "S01/NORMAL_HANDLING_02": {
+    "label": 1,
+    "windows": 11,
+    "active": 7
+   },
+   "S01/ROUGH_HANDLING_05": {
+    "label": 2,
+    "windows": 11,
+    "active": 6
+   },
+   "S01/ROUGH_HANDLING_06": {
+    "label": 2,
+    "windows": 11,
+    "active": 10
+   },
+   "S01/STATIONARY_01": {
+    "label": 0,
+    "windows": 11,
+    "active": 11
+   },
+   "S01/STATIONARY_02": {
+    "label": 0,
+    "windows": 11,
+    "active": 11
+   },
+   "S02/NORMAL_HANDLING_02": {
+    "label": 1,
+    "windows": 11,
+    "active": 7
+   },
+   "S02/NORMAL_HANDLING_03": {
+    "label": 1,
+    "windows": 11,
+    "active": 6
+   },
+   "S02/ROUGH_HANDLING_01": {
+    "label": 2,
+    "windows": 11,
+    "active": 10
+   },
+   "S02/ROUGH_HANDLING_02": {
+    "label": 2,
+    "windows": 11,
+    "active": 7
+   },
+   "S02/STATIONARY_01": {
+    "label": 0,
+    "windows": 11,
+    "active": 11
+   },
+   "S02/STATIONARY_02": {
+    "label": 0,
+    "windows": 11,
+    "active": 11
+   },
+   "S03/NORMAL_HANDLING_01": {
+    "label": 1,
+    "windows": 11,
+    "active": 6
+   },
+   "S03/NORMAL_HANDLING_02": {
+    "label": 1,
+    "windows": 11,
+    "active": 1
+   },
+   "S03/ROUGH_HANDLING_01": {
+    "label": 2,
+    "windows": 11,
+    "active": 8
+   },
+   "S03/ROUGH_HANDLING_02": {
+    "label": 2,
+    "windows": 11,
+    "active": 5
+   },
+   "S03/STATIONARY_01": {
+    "label": 0,
+    "windows": 11,
+    "active": 11
+   },
+   "S03/STATIONARY_02": {
+    "label": 0,
+    "windows": 11,
+    "active": 11
+   },
+   "S04/NORMAL_HANDLING_01": {
+    "label": 1,
+    "windows": 11,
+    "active": 6
+   },
+   "S04/NORMAL_HANDLING_02": {
+    "label": 1,
+    "windows": 11,
+    "active": 5
+   },
+   "S04/ROUGH_HANDLING_01": {
+    "label": 2,
+    "windows": 11,
+    "active": 7
+   },
+   "S04/ROUGH_HANDLING_02": {
+    "label": 2,
+    "windows": 11,
+    "active": 7
+   },
+   "S04/STATIONARY_01": {
+    "label": 0,
+    "windows": 11,
+    "active": 11
+   },
+   "S04/STATIONARY_02": {
+    "label": 0,
+    "windows": 11,
+    "active": 11
+   }
+  },
+  "trials_label_not_performed": [
+   "S03/NORMAL_HANDLING_02"
+  ],
+  "min_active_windows": 3
+ },
+ "misclassified_test_windows": [
+  {
+   "window": "S04/NORMAL_HANDLING_01/w0",
+   "true": "NORMAL_HANDLING",
+   "tree": "ROUGH_HANDLING",
+   "baseline": "NORMAL_HANDLING",
+   "acc_mean": 1.02644,
+   "acc_std": 0.06152,
+   "acc_min": 0.87684,
+   "acc_max": 1.32719,
+   "acc_dev_max": 0.32719,
+   "jerk_mean": 1.48978,
+   "jerk_max": 12.33574,
+   "gyro_mean": 7.02681,
+   "gyro_std": 8.71095,
+   "gyro_max": 44.02127,
+   "high_g_frac": 0.0,
+   "axis_std_max": 0.06069
+  },
+  {
+   "window": "S04/NORMAL_HANDLING_01/w4",
+   "true": "NORMAL_HANDLING",
+   "tree": "ROUGH_HANDLING",
+   "baseline": "ROUGH_HANDLING",
+   "acc_mean": 1.03831,
+   "acc_std": 0.14538,
+   "acc_min": 0.71235,
+   "acc_max": 1.68754,
+   "acc_dev_max": 0.68754,
+   "jerk_mean": 7.5705,
+   "jerk_max": 68.74287,
+   "gyro_mean": 188.15073,
+   "gyro_std": 117.88322,
+   "gyro_max": 528.9693,
+   "high_g_frac": 0.01,
+   "axis_std_max": 0.21277
+  },
+  {
+   "window": "S04/NORMAL_HANDLING_02/w3",
+   "true": "NORMAL_HANDLING",
+   "tree": "ROUGH_HANDLING",
+   "baseline": "ROUGH_HANDLING",
+   "acc_mean": 1.05645,
+   "acc_std": 0.25134,
+   "acc_min": 0.41506,
+   "acc_max": 2.26334,
+   "acc_dev_max": 1.26334,
+   "jerk_mean": 2.87899,
+   "jerk_max": 31.53489,
+   "gyro_mean": 12.79074,
+   "gyro_std": 32.46244,
+   "gyro_max": 133.16702,
+   "high_g_frac": 0.09,
+   "axis_std_max": 0.26301
+  },
+  {
+   "window": "S04/NORMAL_HANDLING_02/w6",
+   "true": "NORMAL_HANDLING",
+   "tree": "ROUGH_HANDLING",
+   "baseline": "ROUGH_HANDLING",
+   "acc_mean": 1.05263,
+   "acc_std": 0.19004,
+   "acc_min": 0.46611,
+   "acc_max": 1.60815,
+   "acc_dev_max": 0.60815,
+   "jerk_mean": 7.34316,
+   "jerk_max": 36.44068,
+   "gyro_mean": 214.68629,
+   "gyro_std": 142.45261,
+   "gyro_max": 472.57883,
+   "high_g_frac": 0.05,
+   "axis_std_max": 0.2982
+  },
+  {
+   "window": "S04/NORMAL_HANDLING_02/w7",
+   "true": "NORMAL_HANDLING",
+   "tree": "ROUGH_HANDLING",
+   "baseline": "ROUGH_HANDLING",
+   "acc_mean": 1.0234,
+   "acc_std": 0.07378,
+   "acc_min": 0.80206,
+   "acc_max": 1.42683,
+   "acc_dev_max": 0.42683,
+   "jerk_mean": 2.3763,
+   "jerk_max": 27.70298,
+   "gyro_mean": 9.17798,
+   "gyro_std": 14.91489,
+   "gyro_max": 68.91427,
+   "high_g_frac": 0.01,
+   "axis_std_max": 0.07361
+  }
+ ],
+ "exclusions": [
+  {
+   "trial": "S01/NORMAL_HANDLING_01",
+   "window": "S01/NORMAL_HANDLING_01/w6",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.63 dps, acc_std 0.0029 g)"
+  },
+  {
+   "trial": "S01/NORMAL_HANDLING_01",
+   "window": "S01/NORMAL_HANDLING_01/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.30 dps, acc_std 0.0031 g)"
+  },
+  {
+   "trial": "S01/NORMAL_HANDLING_01",
+   "window": "S01/NORMAL_HANDLING_01/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.79 dps, acc_std 0.0040 g)"
+  },
+  {
+   "trial": "S01/NORMAL_HANDLING_01",
+   "window": "S01/NORMAL_HANDLING_01/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.31 dps, acc_std 0.0029 g)"
+  },
+  {
+   "trial": "S01/NORMAL_HANDLING_01",
+   "window": "S01/NORMAL_HANDLING_01/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.25 dps, acc_std 0.0037 g)"
+  },
+  {
+   "trial": "S01/NORMAL_HANDLING_02",
+   "window": "S01/NORMAL_HANDLING_02/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.31 dps, acc_std 0.0031 g)"
+  },
+  {
+   "trial": "S01/NORMAL_HANDLING_02",
+   "window": "S01/NORMAL_HANDLING_02/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.24 dps, acc_std 0.0034 g)"
+  },
+  {
+   "trial": "S01/NORMAL_HANDLING_02",
+   "window": "S01/NORMAL_HANDLING_02/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.57 dps, acc_std 0.0046 g)"
+  },
+  {
+   "trial": "S01/NORMAL_HANDLING_02",
+   "window": "S01/NORMAL_HANDLING_02/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.53 dps, acc_std 0.0029 g)"
+  },
+  {
+   "trial": "S01/ROUGH_HANDLING_05",
+   "window": "S01/ROUGH_HANDLING_05/w0",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.19 dps, acc_std 0.0021 g)"
+  },
+  {
+   "trial": "S01/ROUGH_HANDLING_05",
+   "window": "S01/ROUGH_HANDLING_05/w1",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.14 dps, acc_std 0.0017 g)"
+  },
+  {
+   "trial": "S01/ROUGH_HANDLING_05",
+   "window": "S01/ROUGH_HANDLING_05/w2",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.15 dps, acc_std 0.0017 g)"
+  },
+  {
+   "trial": "S01/ROUGH_HANDLING_05",
+   "window": "S01/ROUGH_HANDLING_05/w3",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.18 dps, acc_std 0.0017 g)"
+  },
+  {
+   "trial": "S01/ROUGH_HANDLING_05",
+   "window": "S01/ROUGH_HANDLING_05/w4",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.15 dps, acc_std 0.0020 g)"
+  },
+  {
+   "trial": "S01/ROUGH_HANDLING_06",
+   "window": "S01/ROUGH_HANDLING_06/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.49 dps, acc_std 0.0034 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_02",
+   "window": "S02/NORMAL_HANDLING_02/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.78 dps, acc_std 0.0053 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_02",
+   "window": "S02/NORMAL_HANDLING_02/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.32 dps, acc_std 0.0038 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_02",
+   "window": "S02/NORMAL_HANDLING_02/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.70 dps, acc_std 0.0044 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_02",
+   "window": "S02/NORMAL_HANDLING_02/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.41 dps, acc_std 0.0058 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_03",
+   "window": "S02/NORMAL_HANDLING_03/w6",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.39 dps, acc_std 0.0027 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_03",
+   "window": "S02/NORMAL_HANDLING_03/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.52 dps, acc_std 0.0033 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_03",
+   "window": "S02/NORMAL_HANDLING_03/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.52 dps, acc_std 0.0086 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_03",
+   "window": "S02/NORMAL_HANDLING_03/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.16 dps, acc_std 0.0018 g)"
+  },
+  {
+   "trial": "S02/NORMAL_HANDLING_03",
+   "window": "S02/NORMAL_HANDLING_03/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.20 dps, acc_std 0.0028 g)"
+  },
+  {
+   "trial": "S02/ROUGH_HANDLING_01",
+   "window": "S02/ROUGH_HANDLING_01/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.45 dps, acc_std 0.0031 g)"
+  },
+  {
+   "trial": "S02/ROUGH_HANDLING_02",
+   "window": "S02/ROUGH_HANDLING_02/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.40 dps, acc_std 0.0052 g)"
+  },
+  {
+   "trial": "S02/ROUGH_HANDLING_02",
+   "window": "S02/ROUGH_HANDLING_02/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.12 dps, acc_std 0.0036 g)"
+  },
+  {
+   "trial": "S02/ROUGH_HANDLING_02",
+   "window": "S02/ROUGH_HANDLING_02/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.46 dps, acc_std 0.0042 g)"
+  },
+  {
+   "trial": "S02/ROUGH_HANDLING_02",
+   "window": "S02/ROUGH_HANDLING_02/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.83 dps, acc_std 0.0067 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_01",
+   "window": "S03/NORMAL_HANDLING_01/w0",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.15 dps, acc_std 0.0032 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_01",
+   "window": "S03/NORMAL_HANDLING_01/w1",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.13 dps, acc_std 0.0032 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_01",
+   "window": "S03/NORMAL_HANDLING_01/w2",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.19 dps, acc_std 0.0032 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_01",
+   "window": "S03/NORMAL_HANDLING_01/w3",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.14 dps, acc_std 0.0031 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_01",
+   "window": "S03/NORMAL_HANDLING_01/w4",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.25 dps, acc_std 0.0033 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w1",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.86 dps, acc_std 0.0108 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w2",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.61 dps, acc_std 0.0106 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w3",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.16 dps, acc_std 0.0043 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w4",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.11 dps, acc_std 0.0044 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w5",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.11 dps, acc_std 0.0039 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w6",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.12 dps, acc_std 0.0036 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.11 dps, acc_std 0.0039 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.11 dps, acc_std 0.0040 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.12 dps, acc_std 0.0044 g)"
+  },
+  {
+   "trial": "S03/NORMAL_HANDLING_02",
+   "window": "S03/NORMAL_HANDLING_02/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.13 dps, acc_std 0.0042 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_01",
+   "window": "S03/ROUGH_HANDLING_01/w0",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.11 dps, acc_std 0.0017 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_01",
+   "window": "S03/ROUGH_HANDLING_01/w1",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.12 dps, acc_std 0.0017 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_01",
+   "window": "S03/ROUGH_HANDLING_01/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.20 dps, acc_std 0.0026 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_02",
+   "window": "S03/ROUGH_HANDLING_02/w5",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 1.77 dps, acc_std 0.0092 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_02",
+   "window": "S03/ROUGH_HANDLING_02/w6",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.13 dps, acc_std 0.0022 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_02",
+   "window": "S03/ROUGH_HANDLING_02/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.19 dps, acc_std 0.0017 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_02",
+   "window": "S03/ROUGH_HANDLING_02/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.52 dps, acc_std 0.0072 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_02",
+   "window": "S03/ROUGH_HANDLING_02/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.11 dps, acc_std 0.0019 g)"
+  },
+  {
+   "trial": "S03/ROUGH_HANDLING_02",
+   "window": "S03/ROUGH_HANDLING_02/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.12 dps, acc_std 0.0018 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_01",
+   "window": "S04/NORMAL_HANDLING_01/w6",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.31 dps, acc_std 0.0016 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_01",
+   "window": "S04/NORMAL_HANDLING_01/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.20 dps, acc_std 0.0015 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_01",
+   "window": "S04/NORMAL_HANDLING_01/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.11 dps, acc_std 0.0016 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_01",
+   "window": "S04/NORMAL_HANDLING_01/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.17 dps, acc_std 0.0019 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_01",
+   "window": "S04/NORMAL_HANDLING_01/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.18 dps, acc_std 0.0018 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_02",
+   "window": "S04/NORMAL_HANDLING_02/w0",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.12 dps, acc_std 0.0016 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_02",
+   "window": "S04/NORMAL_HANDLING_02/w1",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.29 dps, acc_std 0.0021 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_02",
+   "window": "S04/NORMAL_HANDLING_02/w2",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.37 dps, acc_std 0.0017 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_02",
+   "window": "S04/NORMAL_HANDLING_02/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.12 dps, acc_std 0.0022 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_02",
+   "window": "S04/NORMAL_HANDLING_02/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.86 dps, acc_std 0.0023 g)"
+  },
+  {
+   "trial": "S04/NORMAL_HANDLING_02",
+   "window": "S04/NORMAL_HANDLING_02/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.85 dps, acc_std 0.0022 g)"
+  },
+  {
+   "trial": "S04/ROUGH_HANDLING_01",
+   "window": "S04/ROUGH_HANDLING_01/w0",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.23 dps, acc_std 0.0034 g)"
+  },
+  {
+   "trial": "S04/ROUGH_HANDLING_01",
+   "window": "S04/ROUGH_HANDLING_01/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.25 dps, acc_std 0.0018 g)"
+  },
+  {
+   "trial": "S04/ROUGH_HANDLING_01",
+   "window": "S04/ROUGH_HANDLING_01/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.40 dps, acc_std 0.0018 g)"
+  },
+  {
+   "trial": "S04/ROUGH_HANDLING_01",
+   "window": "S04/ROUGH_HANDLING_01/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.20 dps, acc_std 0.0017 g)"
+  },
+  {
+   "trial": "S04/ROUGH_HANDLING_02",
+   "window": "S04/ROUGH_HANDLING_02/w7",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.56 dps, acc_std 0.0029 g)"
+  },
+  {
+   "trial": "S04/ROUGH_HANDLING_02",
+   "window": "S04/ROUGH_HANDLING_02/w8",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.22 dps, acc_std 0.0018 g)"
+  },
+  {
+   "trial": "S04/ROUGH_HANDLING_02",
+   "window": "S04/ROUGH_HANDLING_02/w9",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.74 dps, acc_std 0.0025 g)"
+  },
+  {
+   "trial": "S04/ROUGH_HANDLING_02",
+   "window": "S04/ROUGH_HANDLING_02/w10",
+   "reason": "label_inconsistent: no handling motion in a handling-labelled window (gyro_max 0.44 dps, acc_std 0.0023 g)"
+  }
+ ],
+ "n_windows": 264,
+ "elapsed_s": 1.4
+}

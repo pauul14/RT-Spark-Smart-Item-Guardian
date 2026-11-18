@@ -1,0 +1,41 @@
+{
+ "label": "ROUGH_HANDLING",
+ "session": "S01",
+ "trial": "ROUGH_HANDLING_03",
+ "gyro_bias": [
+  26.15,
+  -41.135,
+  -0.43
+ ],
+ "bias_ok": true,
+ "fs_hz": 100,
+ "fw": "1.0.0",
+ "model_on_board": "ph-fd5d5654a0",
+ "recorded_utc": "2026-11-18T05:22:03.928+00:00",
+ "requested_seconds": 25.0,
+ "stop_line": "#CAP,STOP,1,samples=2513,t_ms=984624,log_drop_lines=0",
+ "synthetic": false,
+ "simulated": false,
+ "operator_verdict": "rejected",
+ "quality": {
+  "samples": 2509,
+  "gaps": 0,
+  "missing": 0,
+  "invalid": 0,
+  "duration_s": 25.08,
+  "effective_rate_hz": 100.0,
+  "ok": true
+ },
+ "operator_id": "P1",
+ "placement": "bare board, no enclosure (held directly by hand)",
+ "surface": "desk",
+ "note": "",
+ "excluded": true,
+ "exclusion_reason": "operator rejected",
+ "enclosure": "none",
+ "setup_correction": {
+  "date": "2026-11-18",
+  "statement": "Operator correction 2026-11-18: every S01-S06 recording was made with the bare RT-Spark board, held directly in the hand for handling trials, with no box or enclosure. Sensor readings (CSV) are unchanged. Placement/setup texts that mention a box, lid, foam or re-seating describe the PLAN, not what was done; they are kept below as *_as_logged.",
+  "placement_as_logged": "board-flat-in-foam-lid-up"
+ }
+}

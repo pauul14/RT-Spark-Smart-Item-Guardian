@@ -1,0 +1,99 @@
+{
+ "model_id": "dt-adfe15c9f6",
+ "model_dir": "models/dt-adfe15c9f6",
+ "frozen_utc": "2026-11-18T07:52:59Z",
+ "reason": "Same GUARD-screen cleanup build, relinked so cli.c/main.c carry a fresh __DATE__/__TIME__ stamp; this lets the runner's identity check distinguish this image from every earlier build. No source change. ML artifacts unchanged.",
+ "hyperparameters": {
+  "max_depth": 2,
+  "min_samples_leaf": 8,
+  "selection": "leave-one-session-out CV on training sessions, macro-F1"
+ },
+ "label_consistency": {
+  "rule": "handling window kept if gyro_max > T_g or acc_std > T_a (T from training STATIONARY maxima)",
+  "thresholds": {
+   "gyro_max_dps": 2.11005,
+   "acc_std_g": 0.01149
+  },
+  "min_active_windows": 3
+ },
+ "baseline": {
+  "still_acc_std": 0.030158471316099167,
+  "still_gyro_max": 22.26004981994629,
+  "rough_dev_max": 0.35209786891937256,
+  "rough_gyro_max": 499.8299560546875
+ },
+ "preprocessing": {
+  "fs_hz": 100,
+  "window_samples": 200,
+  "hop_samples_online": 50,
+  "acc_lsb_per_g": 4096.0,
+  "gyro_lsb_per_dps": 32.8,
+  "high_g_dev": 0.4,
+  "trim_s": 1.0,
+  "max_gap_samples": 2,
+  "arithmetic": "binary32, see features.c"
+ },
+ "train_sessions": [
+  "S01",
+  "S02",
+  "S03",
+  "S05"
+ ],
+ "validation_sessions": [
+  "S04"
+ ],
+ "test_sessions": [
+  "S06"
+ ],
+ "test_sessions_present_at_freeze": [],
+ "firmware_bin_included": true,
+ "hashes": {
+  "models/dt-adfe15c9f6/model.json": "dd23804120455f745518800943986f210a8f84c10c6b5d0c5886c81493b09141",
+  "src/model/baseline_params.h": "bd35c67ec44de9085d272baea0b260ebc3215510045d75272dc2db1acdeb939d",
+  "src/model/golden_vectors.h": "c642955f171302424d8ad75b09f53a832c696b0bcd0313abc9efb6d6ac5f8ad3",
+  "src/model/model_config.h": "b0accfe4079276025d8a15a41558e695f72ec2f5416802f1719b3d315526e4c9",
+  "src/model/model_tree.h": "d8fab920355806b3d83542dab03af605809815e5e2e3847efef1d2494489b4bb",
+  "tools/ml/sigml/__init__.py": "760c5c1a0e488aa3fdf05ceb6ad6db04f06fafd7e8cdd06ea15deb8beadc7e98",
+  "tools/ml/sigml/baseline.py": "c3f3818556f8c0a540105bd43a56a9ce1712d59805647292a39f641c3cc652ae",
+  "tools/ml/sigml/cart.py": "4261d3531931c8fbbd7db613a3e628f84b247512ea7dc28265e1d58c45114adf",
+  "tools/ml/sigml/dataset.py": "3fae8fe7dc3cc6f90bce24592caea9d4230e667a348b69da816467ed1d2dc903",
+  "tools/ml/sigml/export.py": "935c35d9de28139f998fa3226221146962d5d0bb4c9f9a0b2cf28844b296f111",
+  "tools/ml/sigml/features.py": "8f3f7074dfa5c2bc402eea8e9030f9d0c300bf558bcab09ff5b377629ebd21e0",
+  "tools/ml/sigml/metrics.py": "c3dbfa0f3546db0b83fffae469e414ca2c92533a5b63ac3c85d8226823bd2bf5",
+  "tools/ml/sigml/synth.py": "e3c5cf16bcf46068a6b67584e18ceb5691d81fd1a9536c9d0c8239872ce131b1",
+  "tools/ml/train.py": "c5b7d28c4e220609e0ec5890fde73b32c9100a5795e3ec1fba8838648b111d90",
+  "tools/ml/training_config.json": "f136bb225214ee1954d85dc5fa6e4300504d8077b3f042b4e8d2c9a2c46614a8",
+  "data/splits.json": "f0393092f04fac9f622978919b0f43568fcf00e7404aeaa36ade6bd9cf12a2a1",
+  "src/core/features.c": "3c03d324a5444e0b505d8b31beea72daee0831f513baed716af936cc90d3ed6c",
+  "src/core/model_infer.c": "9bfbae1fffb015b62179abf5579480277115ca16dd24da4b4a1b775cc5be1d30",
+  ".pio/build/rt_spark/firmware.bin": "b75eec7bbe4adbcc543ed1cd7b42dfa9372021c92653a8a9e1ab8f0d64ae5307"
+ },
+ "history": [
+  {
+   "model_id": "dt-adfe15c9f6",
+   "frozen_utc": "2026-11-18T06:29:40Z",
+   "reason": "initial freeze before the independent test session",
+   "archived_as": "models/freeze_history/frozen_dt-adfe15c9f6_20261118T062940Z.json"
+  },
+  {
+   "model_id": "dt-adfe15c9f6",
+   "frozen_utc": "2026-11-18T07:38:05Z",
+   "reason": "Scope change 2026-11-18: lid detection and enclosure requirement removed; AP3216C proximity touchless acknowledgement added (firmware integration change). Model dt-adfe15c9f6, weights, preprocessing, recordings, splits and the S06 evaluation are unchanged; host C parity 66/66 on S04 and S06 with the new build.",
+   "archived_as": "models/freeze_history/frozen_dt-adfe15c9f6_20261118T073805Z.json"
+  },
+  {
+   "model_id": "dt-adfe15c9f6",
+   "frozen_utc": "2026-11-18T07:52:28Z",
+   "reason": "Minimal LCD cleanup on the GUARD screen (2026-11-18): larger predicted-activity box, full-width high-contrast alert banner, readable hand-ack/control status and key legend (bottom row no longer off-screen); diagnostics screens unchanged. Model, preprocessing and all ML artifacts unchanged; host C parity 66/66 on S04 and S06 with this build.",
+   "archived_as": "models/freeze_history/frozen_dt-adfe15c9f6_20261118T075228Z.json"
+  }
+ ],
+ "kind": "successor (firmware integration change; model and ML artifacts unchanged)",
+ "successor_of": "models/freeze_history/frozen_dt-adfe15c9f6_20261118T075228Z.json",
+ "ml_artifacts_unchanged": true,
+ "changed_files": [],
+ "firmware_built_stamps": [
+  "Nov 18 2026 15:31:41",
+  "Nov 18 2026 15:37:43"
+ ]
+}

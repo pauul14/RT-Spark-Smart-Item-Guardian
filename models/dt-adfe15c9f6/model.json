@@ -1,0 +1,154 @@
+{
+ "model_id": "dt-adfe15c9f6",
+ "placeholder": false,
+ "synthetic_data": false,
+ "classes": [
+  "STATIONARY",
+  "NORMAL_HANDLING",
+  "ROUGH_HANDLING"
+ ],
+ "features": [
+  "acc_mean",
+  "acc_std",
+  "acc_min",
+  "acc_max",
+  "acc_dev_max",
+  "jerk_mean",
+  "jerk_max",
+  "gyro_mean",
+  "gyro_std",
+  "gyro_max",
+  "high_g_frac",
+  "axis_std_max"
+ ],
+ "used_features": [
+  "acc_mean",
+  "gyro_max"
+ ],
+ "preprocessing": {
+  "fs_hz": 100,
+  "window_samples": 200,
+  "hop_samples_online": 50,
+  "acc_lsb_per_g": 4096.0,
+  "gyro_lsb_per_dps": 32.8,
+  "high_g_dev": 0.4,
+  "trim_s": 1.0,
+  "max_gap_samples": 2,
+  "arithmetic": "binary32, see features.c"
+ },
+ "hyperparameters": {
+  "max_depth": 2,
+  "min_samples_leaf": 8,
+  "selection": "leave-one-session-out CV on training sessions, macro-F1"
+ },
+ "tree": {
+  "max_depth_param": 2,
+  "min_samples_leaf": 8,
+  "depth": 2,
+  "n_nodes": 5,
+  "nodes": [
+   {
+    "id": 0,
+    "feature": 9,
+    "feature_name": "gyro_max",
+    "threshold": 2.137908935546875,
+    "left": 1,
+    "right": 2,
+    "class": 1,
+    "counts": [
+     66,
+     77,
+     46
+    ],
+    "purity_pct": 41
+   },
+   {
+    "id": 1,
+    "feature": -1,
+    "feature_name": null,
+    "threshold": 0.0,
+    "left": -1,
+    "right": -1,
+    "class": 0,
+    "counts": [
+     66,
+     0,
+     0
+    ],
+    "purity_pct": 100
+   },
+   {
+    "id": 2,
+    "feature": 0,
+    "feature_name": "acc_mean",
+    "threshold": 1.042365312576294,
+    "left": 3,
+    "right": 4,
+    "class": 1,
+    "counts": [
+     0,
+     77,
+     46
+    ],
+    "purity_pct": 63
+   },
+   {
+    "id": 3,
+    "feature": -1,
+    "feature_name": null,
+    "threshold": 0.0,
+    "left": -1,
+    "right": -1,
+    "class": 1,
+    "counts": [
+     0,
+     75,
+     13
+    ],
+    "purity_pct": 85
+   },
+   {
+    "id": 4,
+    "feature": -1,
+    "feature_name": null,
+    "threshold": 0.0,
+    "left": -1,
+    "right": -1,
+    "class": 2,
+    "counts": [
+     0,
+     2,
+     33
+    ],
+    "purity_pct": 94
+   }
+  ]
+ },
+ "baseline": {
+  "still_acc_std": 0.030158471316099167,
+  "still_gyro_max": 22.26004981994629,
+  "rough_dev_max": 0.35209786891937256,
+  "rough_gyro_max": 499.8299560546875
+ },
+ "data_hash": "b5ab1c8211cc11b4",
+ "label_consistency": {
+  "rule": "handling window kept if gyro_max > T_g or acc_std > T_a (T from training STATIONARY maxima)",
+  "thresholds": {
+   "gyro_max_dps": 2.11005,
+   "acc_std_g": 0.01149
+  },
+  "min_active_windows": 3
+ },
+ "sessions": {
+  "train": [
+   "S01",
+   "S02",
+   "S03",
+   "S05"
+  ],
+  "validation": [
+   "S04"
+  ]
+ },
+ "python": "3.11.7"
+}

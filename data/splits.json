@@ -1,0 +1,7 @@
+{
+  "_comment": "Session-based split for REAL board data (data/raw/<session>/). A session is one recording session: the board is re-placed in the box and the setup recorded in session.json. Windows from one session never appear in two splits. Round 2 (2026-11-18): S04 was the round-1 held-out session, but its results informed a preprocessing change (label-consistency rule), so it is now VALIDATION / development evidence only - never trained on, never reported as the final test. S05 is a NORMAL-only training session. S06 is the new independent test session, evaluated once by tools/ml/evaluate_test.py against the frozen model (models/frozen.json); train.py never reads test sessions. Round-1 split kept in data/splits_round1_20261118.json.",
+  "train_sessions": ["S01", "S02", "S03", "S05"],
+  "validation_sessions": ["S04"],
+  "test_sessions": ["S06"],
+  "final_trial_sessions": ["F01"]
+}

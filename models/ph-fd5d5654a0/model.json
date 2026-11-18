@@ -1,0 +1,135 @@
+{
+ "model_id": "ph-fd5d5654a0",
+ "placeholder": true,
+ "synthetic_data": true,
+ "classes": [
+  "STATIONARY",
+  "NORMAL_HANDLING",
+  "ROUGH_HANDLING"
+ ],
+ "features": [
+  "acc_mean",
+  "acc_std",
+  "acc_min",
+  "acc_max",
+  "acc_dev_max",
+  "jerk_mean",
+  "jerk_max",
+  "gyro_mean",
+  "gyro_std",
+  "gyro_max",
+  "high_g_frac",
+  "axis_std_max"
+ ],
+ "used_features": [
+  "acc_mean",
+  "acc_std"
+ ],
+ "preprocessing": {
+  "fs_hz": 100,
+  "window_samples": 200,
+  "hop_samples_online": 50,
+  "acc_lsb_per_g": 4096.0,
+  "gyro_lsb_per_dps": 32.8,
+  "high_g_dev": 0.4,
+  "trim_s": 1.0,
+  "max_gap_samples": 2,
+  "arithmetic": "binary32, see features.c"
+ },
+ "hyperparameters": {
+  "max_depth": 2,
+  "min_samples_leaf": 8,
+  "selection": "leave-one-session-out CV on training sessions, macro-F1"
+ },
+ "tree": {
+  "max_depth_param": 2,
+  "min_samples_leaf": 8,
+  "depth": 2,
+  "n_nodes": 5,
+  "nodes": [
+   {
+    "id": 0,
+    "feature": 0,
+    "feature_name": "acc_mean",
+    "threshold": 1.1165385246276855,
+    "left": 1,
+    "right": 4,
+    "class": 0,
+    "counts": [
+     66,
+     66,
+     66
+    ],
+    "purity_pct": 33
+   },
+   {
+    "id": 1,
+    "feature": 1,
+    "feature_name": "acc_std",
+    "threshold": 0.038205549120903015,
+    "left": 2,
+    "right": 3,
+    "class": 0,
+    "counts": [
+     66,
+     66,
+     0
+    ],
+    "purity_pct": 50
+   },
+   {
+    "id": 2,
+    "feature": -1,
+    "feature_name": null,
+    "threshold": 0.0,
+    "left": -1,
+    "right": -1,
+    "class": 0,
+    "counts": [
+     66,
+     0,
+     0
+    ],
+    "purity_pct": 100
+   },
+   {
+    "id": 3,
+    "feature": -1,
+    "feature_name": null,
+    "threshold": 0.0,
+    "left": -1,
+    "right": -1,
+    "class": 1,
+    "counts": [
+     0,
+     66,
+     0
+    ],
+    "purity_pct": 100
+   },
+   {
+    "id": 4,
+    "feature": -1,
+    "feature_name": null,
+    "threshold": 0.0,
+    "left": -1,
+    "right": -1,
+    "class": 2,
+    "counts": [
+     0,
+     0,
+     66
+    ],
+    "purity_pct": 100
+   }
+  ]
+ },
+ "baseline": {
+  "still_acc_std": 0.0743078887462616,
+  "still_gyro_max": 39.01411056518555,
+  "rough_dev_max": 1.6046969890594482,
+  "rough_gyro_max": 331.4518737792969
+ },
+ "data_hash": "b215d51b4016adec",
+ "python": "3.11.7"
+}

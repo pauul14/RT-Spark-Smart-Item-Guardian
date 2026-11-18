@@ -1,0 +1,6 @@
+{
+  "_comment": "Session-based split for REAL board data (data/raw/<session>/). A session is one recording session: the board is re-placed in the box and the setup recorded in session.json. Windows from one session never appear on both sides. Final product trials (tools/hw/final_test.py) are recorded separately and never used for training or tuning.",
+  "train_sessions": ["S01", "S02", "S03"],
+  "test_sessions": ["S04"],
+  "final_trial_sessions": ["F01"]
+}

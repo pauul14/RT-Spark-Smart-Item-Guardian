@@ -1,0 +1,103 @@
+{
+ "session": "S04",
+ "complete": true,
+ "kept_before_this_run": {
+  "STATIONARY": 0,
+  "NORMAL_HANDLING": 0,
+  "ROUGH_HANDLING": 0
+ },
+ "operator_id": "P1",
+ "ui": "board",
+ "setup": "bare board, no enclosure (held directly by hand)",
+ "placement": "bare board, no enclosure (held directly by hand)",
+ "surface": "other",
+ "finished_utc": "2026-11-18T05:54:28.102+00:00",
+ "board": "#VER,fw=SmartItemGuardian,version=1.0.0,built=Nov 18 2026 02:02:40,model=ph-fd5d5654a0,placeholder=1,model_bytes=55,nodes=5,depth=2,freertos=V10.3.1,hal=0x01080300",
+ "trials": [
+  {
+   "trial": "NORMAL_HANDLING_01",
+   "label": "NORMAL_HANDLING",
+   "excluded": false,
+   "samples": 2508,
+   "gaps": 0,
+   "missing": 0,
+   "invalid": 0,
+   "duration_s": 25.069,
+   "effective_rate_hz": 100.0,
+   "ok": true
+  },
+  {
+   "trial": "STATIONARY_01",
+   "label": "STATIONARY",
+   "excluded": false,
+   "samples": 2509,
+   "gaps": 0,
+   "missing": 0,
+   "invalid": 0,
+   "duration_s": 25.079,
+   "effective_rate_hz": 100.0,
+   "ok": true
+  },
+  {
+   "trial": "ROUGH_HANDLING_01",
+   "label": "ROUGH_HANDLING",
+   "excluded": false,
+   "samples": 2508,
+   "gaps": 0,
+   "missing": 0,
+   "invalid": 0,
+   "duration_s": 25.069,
+   "effective_rate_hz": 100.0,
+   "ok": true
+  },
+  {
+   "trial": "NORMAL_HANDLING_02",
+   "label": "NORMAL_HANDLING",
+   "excluded": false,
+   "samples": 2510,
+   "gaps": 0,
+   "missing": 0,
+   "invalid": 0,
+   "duration_s": 25.09,
+   "effective_rate_hz": 100.0,
+   "ok": true
+  },
+  {
+   "trial": "STATIONARY_02",
+   "label": "STATIONARY",
+   "excluded": false,
+   "samples": 2508,
+   "gaps": 0,
+   "missing": 0,
+   "invalid": 0,
+   "duration_s": 25.07,
+   "effective_rate_hz": 100.0,
+   "ok": true
+  },
+  {
+   "trial": "ROUGH_HANDLING_02",
+   "label": "ROUGH_HANDLING",
+   "excluded": false,
+   "samples": 2509,
+   "gaps": 0,
+   "missing": 0,
+   "invalid": 0,
+   "duration_s": 25.08,
+   "effective_rate_hz": 100.0,
+   "ok": true
+  }
+ ],
+ "simulated": false,
+ "kept_per_class": {
+  "STATIONARY": 2,
+  "NORMAL_HANDLING": 2,
+  "ROUGH_HANDLING": 2
+ },
+ "enclosure": "none",
+ "setup_correction": {
+  "date": "2026-11-18",
+  "statement": "Operator correction 2026-11-18: every S01-S06 recording was made with the bare RT-Spark board, held directly in the hand for handling trials, with no box or enclosure. Sensor readings (CSV) are unchanged. Placement/setup texts that mention a box, lid, foam or re-seating describe the PLAN, not what was done; they are kept below as *_as_logged.",
+  "placement_as_logged": "held-out-new-setup",
+  "setup_as_logged": "HELD-OUT session: re-seat the board in the box and use a new spot not used before."
+ }
+}

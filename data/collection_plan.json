@@ -1,0 +1,60 @@
+{
+  "_comment": "Hardware session 1 data-collection plan used by tools/hw/collect_all.py. Each session is a separate recording session: the box is re-placed and the setting changed before it starts, so train (S01-S03) and held-out test (S04) data never share a setup. 2 trials x 25 s per class -> about 22 windows per class per session (minimum needed: 30 train / 10 test per class). Operator ids are anonymous. Round 2 (2026-11-18): S04 re-designated validation (see data/splits.json); S05 = NORMAL-only training session (4 varied gentle trials); S06 = new independent test session, recorded only after the model is frozen. Run with --ui terminal (typed confirmations).",
+  "trials_per_class": 2,
+  "seconds": 25,
+  "sessions": [
+    {
+      "session": "S01",
+      "split": "train",
+      "operator": "P1",
+      "placement": "board-flat-in-foam-lid-up",
+      "surface": "desk",
+      "setup": "Board flat in the box, sensor facing the lid. Box on the desk."
+    },
+    {
+      "session": "S02",
+      "split": "train",
+      "operator": "P1",
+      "placement": "box-turned-90deg",
+      "surface": "desk",
+      "setup": "Turn the whole box 90 degrees and move it to another spot on the desk."
+    },
+    {
+      "session": "S03",
+      "split": "train",
+      "operator": "P1",
+      "placement": "box-on-other-surface",
+      "surface": "chair-or-shelf",
+      "setup": "Move the box to a different surface (chair, shelf or floor mat)."
+    },
+    {
+      "session": "S04",
+      "split": "validation",
+      "operator": "P1",
+      "placement": "held-out-new-setup",
+      "surface": "other",
+      "setup": "VALIDATION session (was held-out in round 1): re-seat the board in the box and use a new spot not used before."
+    },
+    {
+      "session": "S05",
+      "split": "train",
+      "operator": "P1",
+      "placement": "box-new-spot-normal-only",
+      "surface": "desk-and-walk",
+      "labels": [
+        "NORMAL_HANDLING"
+      ],
+      "trials_per_class": 4,
+      "setup": "NORMAL-only training session. Box closed, board inside, USB cable slack. Start from a spot not used before."
+    },
+    {
+      "session": "S06",
+      "split": "test",
+      "operator": "P1",
+      "placement": "held-out-round2-new-setup",
+      "surface": "other-new",
+      "setup": "NEW TEST session: re-seat the board in the box, close the lid, use a spot and surface not used before."
+    }
+  ],
+  "setup_correction_20261118": "All S01-S06 sessions were actually recorded with the bare RT-Spark board held directly by hand, with no box or enclosure; the setup texts below describe the plan. See data/metadata_correction_20261118.json."
+}

@@ -1,0 +1,47 @@
+{
+ "label": "NORMAL_HANDLING",
+ "session": "S05",
+ "trial": "NORMAL_HANDLING_03",
+ "gyro_bias": [
+  27.165,
+  -41.925,
+  -0.58
+ ],
+ "bias_ok": true,
+ "fs_hz": 100,
+ "fw": "1.0.0",
+ "model_on_board": "ph-fd5d5654a0",
+ "recorded_utc": "2026-11-18T06:28:23.285+00:00",
+ "requested_seconds": 25.0,
+ "stop_line": "#CAP,STOP,1,samples=2514,t_ms=4963772,log_drop_lines=0",
+ "synthetic": false,
+ "simulated": false,
+ "normal_variant": "slide-reposition",
+ "activity": {
+  "active_windows": 11,
+  "windows": 11,
+  "timeline": "###########"
+ },
+ "operator_verdict": "confirmed_typed",
+ "quality": {
+  "samples": 2508,
+  "gaps": 0,
+  "missing": 0,
+  "invalid": 0,
+  "duration_s": 25.069,
+  "effective_rate_hz": 100.0,
+  "ok": true
+ },
+ "operator_id": "P1",
+ "placement": "bare board, no enclosure (held directly by hand)",
+ "surface": "desk-and-walk",
+ "note": "",
+ "excluded": false,
+ "exclusion_reason": "",
+ "enclosure": "none",
+ "setup_correction": {
+  "date": "2026-11-18",
+  "statement": "Operator correction 2026-11-18: every S01-S06 recording was made with the bare RT-Spark board, held directly in the hand for handling trials, with no box or enclosure. Sensor readings (CSV) are unchanged. Placement/setup texts that mention a box, lid, foam or re-seating describe the PLAN, not what was done; they are kept below as *_as_logged.",
+  "placement_as_logged": "box-new-spot-normal-only"
+ }
+}

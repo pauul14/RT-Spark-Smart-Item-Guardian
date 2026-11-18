@@ -1,0 +1,9 @@
+{
+  "_comment": "Hyperparameter grid for tools/ml/train.py. Selection uses leave-one-session-out CV on the training sessions only; ties prefer the shallower tree. Keep the tree bounded (depth <= 5) so worst-case inference time stays constant and tiny.",
+  "label_consistency": true,
+  "_label_consistency": "Exclude NORMAL/ROUGH windows with no handling motion (thresholds = max gyro_max / acc_std of TRAINING STATIONARY windows). Excluded windows are listed in report.md; metrics on the uncleaned test set are reported too. Added 2026-11-18 after S01-S04 showed operators resting mid-trial.",
+  "grid": {
+    "max_depth": [2, 3, 4, 5],
+    "min_samples_leaf": [2, 4, 8]
+  }
+}
