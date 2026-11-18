@@ -1,0 +1,31 @@
+{
+ "utc": "20261118T080936Z",
+ "setup": "handheld prototype: bare RT-Spark board, no enclosure, not mounted to an item",
+ "steps": {
+  "prereq": "ok",
+  "key_check_1": {
+   "rc": 0,
+   "file": "evidence\\hardware\\keymap_check\\verify_20261118T080937Z.json",
+   "verdict": "PASS"
+  },
+  "prox_check": {
+   "rc": 0,
+   "dir": "evidence\\hardware\\prox_check_20261118T081020Z"
+  },
+  "network_before_final": [
+   {
+    "adapter": 1,
+    "status": "Up"
+   },
+   {
+    "adapter": 2,
+    "status": "Up"
+   }
+  ],
+  "final_test": {
+   "rc": 0,
+   "dir": "evidence\\hardware\\final_20261118T081218Z"
+  }
+ },
+ "board": "#VER,fw=SmartItemGuardian,version=1.0.0,built=Nov 18 2026 15:53:39,model=dt-adfe15c9f6,placeholder=0,model_bytes=55,nodes=5,depth=2,freertos=V10.3.1,hal=0x01080300"
+}

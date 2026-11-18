@@ -1,0 +1,120 @@
+{
+ "utc": "20261118T055751Z",
+ "steps": [
+  {
+   "step": "dataset gate",
+   "ok": true,
+   "detail": "train/class [66, 33, 46], test/class [22, 11, 14], 72 excluded windows"
+  },
+  {
+   "step": "train",
+   "ok": true,
+   "detail": [
+    "test tree acc=0.894 macroF1=0.851 | baseline acc=0.723 macroF1=0.577",
+    "label consistency: 72 handling windows without motion excluded; as-collected test tree acc=0.636 macroF1=0.603; activity not performed: ['S03/NORMAL_HANDLING_02']",
+    "requirements train_ok=True test_ok=True -> models\\dt-d8b2af7075"
+   ]
+  },
+  {
+   "step": "held-out requirements",
+   "ok": true,
+   "detail": "tree acc 0.894 macroF1 0.851; baseline acc 0.723 macroF1 0.577"
+  },
+  {
+   "step": "model quality (held-out tree >= rule baseline)",
+   "ok": true,
+   "detail": "tree macroF1 0.851 vs baseline 0.577; as-collected tree acc 0.636 macroF1 0.603"
+  },
+  {
+   "step": "C parity (host)",
+   "ok": true,
+   "detail": "xact\": 66,\n \"baseline_agreement\": 66,\n \"all_match\": true,\n \"host_compiler\": \"gcc.exe (i686-posix-dwarf-rev0, Built by MinGW-W64 project) 5.1.0\",\n \"host_cflags\": \"-std=gnu11 -O2 -Wall -Wextra -ffp-contract=off -fno-math-errno -fexcess-precision=standard -msse2 -mfpmath=sse -static\",\n \"harness_header\": \"# model=dt-d8b2af7075 placeholder=0 nodes=15 depth=4 model_bytes=165\",\n \"compiler_warnings\": \"\"\n}"
+  },
+  {
+   "step": "offline checks + firmware build",
+   "ok": true,
+   "detail": "see evidence/offline/LATEST.md"
+  },
+  {
+   "step": "gate 2",
+   "ok": true,
+   "detail": "flash model dt-d8b2af7075 (approval required), then run tools/hw/final_test.py"
+  }
+ ],
+ "data": {
+  "label_consistency": {
+   "thresholds": {
+    "gyro_max_dps": 2.11005,
+    "acc_std_g": 0.01149
+   },
+   "excluded_windows": 72,
+   "trials_label_not_performed": [
+    "S03/NORMAL_HANDLING_02"
+   ]
+  },
+  "trials": 24,
+  "windows": 264,
+  "excluded_windows": 72,
+  "train_per_class": [
+   66,
+   33,
+   46
+  ],
+  "test_per_class": [
+   22,
+   11,
+   14
+  ],
+  "unused_sessions": []
+ },
+ "model": {
+  "id": "dt-d8b2af7075",
+  "test_tree": {
+   "accuracy": 0.8936170212765957,
+   "macro_f1": 0.8514557338086749,
+   "confusion": [
+    [
+     22,
+     0,
+     0
+    ],
+    [
+     0,
+     6,
+     5
+    ],
+    [
+     0,
+     0,
+     14
+    ]
+   ]
+  },
+  "test_baseline": {
+   "accuracy": 0.723404255319149,
+   "macro_f1": 0.5771361026680176,
+   "confusion": [
+    [
+     22,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     10
+    ],
+    [
+     3,
+     0,
+     11
+    ]
+   ]
+  },
+  "requirements": {
+   "train_ok": true,
+   "test_ok": true
+  }
+ },
+ "gate2_ready": true
+}

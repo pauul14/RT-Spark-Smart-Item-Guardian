@@ -1,0 +1,82 @@
+{
+ "utc": "20261118T055433Z",
+ "all_pass": true,
+ "results": [
+  {
+   "name": "python unit tests",
+   "pass": true,
+   "detail": "Ran 10 tests OK",
+   "log": "test_rule_order (test_sigml.BaselineTests.test_rule_order) ... ok\ntest_adjacent_float_threshold (test_sigml.CartTests.test_adjacent_float_threshold) ... ok\ntest_depth_bound_and_leaf_size (test_sigml.CartTests.test_depth_bound_and_leaf_size) ... ok\ntest_separable (test_sigml.CartTests.test_separable) ... ok\ntest_all_binary32 (test_sigml.FeatureTests.test_all_binary32) ... ok\ntest_jerk_and_high_g (test_sigml.FeatureTests.test_jerk_and_high_g) ... ok\ntest_still_gravity (test_sigml.FeatureTests.test_still_gravity) ... ok\ntest_confusion_and_prf (test_sigml.MetricsTests.test_confusion_and_prf) ... ok\ntest_gap_and_invalid_windows_excluded (test_sigml.SplitTests.test_gap_and_invalid_windows_excluded) ... ok\ntest_overlapping_sessions_rejected (test_sigml.SplitTests.test_overlapping_sessions_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.019s\n\nOK\n"
+  },
+  {
+   "name": "host C unit tests",
+   "pass": true,
+   "detail": "55 passed, 0 failed, compiler warnings 0",
+   "log": "host core tests: 55 passed, 0 failed\n"
+  },
+  {
+   "name": "exported C model parity (host)",
+   "pass": true,
+   "detail": "model dt-ac8173075c placeholder=False: classes 66/66, features bit-exact 66/66, baseline 66/66",
+   "log": "{\n \"model_id\": \"dt-ac8173075c\",\n \"placeholder\": false,\n \"windows\": 66,\n \"windows_from\": \"held-out test sessions (heldout_windows.jsonl)\",\n \"prediction_agreement\": 66,\n \"features_bit_exact\": 66,\n \"baseline_agreement\": 66,\n \"all_match\": true,\n \"host_compiler\": \"gcc.exe (i686-posix-dwarf-rev0, Built by MinGW-W64 project) 5.1.0\",\n \"host_cflags\": \"-std=gnu11 -O2 -Wall -Wextra -ffp-contract=off -fno-math-errno -fexcess-precision=standard -msse2 -mfpmath=sse -static\",\n \"harness_header\": \"# model=dt-ac8173075c placeholder=0 nodes=29 depth=5 model_bytes=319\",\n \"compiler_warnings\": \"\"\n}\n"
+  },
+  {
+   "name": "firmware build (pio run -e rt_spark)",
+   "pass": true,
+   "detail": "FLASH 165296 B / 1 MB (15.76%); RAM 26400 B / 128 KB (20.14%); CCMRAM 48 KB / 64 KB (75.00%); warnings 0",
+   "memory": [
+    {
+     "region": "FLASH",
+     "used": "165296 B",
+     "size": "1 MB",
+     "pct": "15.76%"
+    },
+    {
+     "region": "RAM",
+     "used": "26400 B",
+     "size": "128 KB",
+     "pct": "20.14%"
+    },
+    {
+     "region": "CCMRAM",
+     "used": "48 KB",
+     "size": "64 KB",
+     "pct": "75.00%"
+    }
+   ],
+   "log": "Processing rt_spark (platform: ststm32@19.7.1; framework: stm32cube; board: rt_spark_f407zg)\n--------------------------------------------------------------------------------\nVerbose mode can be enabled via `-v, --verbose` option\nCONFIGURATION: https://docs.platformio.org/page/boards/ststm32/rt_spark_f407zg.html\nPLATFORM: ST STM32 (19.7.1) > RT-Thread RT-Spark (Spark-1, HW1.1) STM32F407ZGT6\nHARDWARE: STM32F407ZGT6 168MHz, 128KB RAM, 1MB Flash\nDEBUG: Current (stlink) On-board (stlink)\nPACKAGES: \n - framework-stm32cubef4 @ 1.28.1 \n - tool-ldscripts-ststm32 @ 0.2.0 \n - toolchain-gccarmnoneeabi @ 1.70201.0 (7.2.1)\nLDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf\nLDF Modes: Finder ~ chain+, Compatibility ~ soft\nFound 61 compatible libraries\nScanning dependencies...\nDependency Graph\n|-- FreeRTOS-Kernel @ 10.3.1\n|-- FatFs @ 0.12.3\nBuilding in release mode\nCompiling .pio\\build\\rt_spark\\src\\app\\golden.o\nCompiling .pio\\build\\rt_spark\\src\\core\\model_infer.o\nLinking .pio\\build\\rt_spark\\firmware.elf\nMemory region         Used Size  Region Size  %age Used\n           FLASH:      165296 B         1 MB     15.76%\n             RAM:       26400 B       128 KB     20.14%\n          CCMRAM:         48 KB        64 KB     75.00%\nChecking size .pio\\build\\rt_spark\\firmware.elf\nAdvanced Memory Usage is available via \"PlatformIO Home > Project Inspect\"\nRAM:   [==        ]  17.0% (used 22304 bytes from 131072 bytes)\nFlash: [==        ]  15.7% (used 164880 bytes from 1048576 bytes)\nBuilding .pio\\build\\rt_spark\\firmware.bin\n========================= [SUCCESS] Took 6.38 seconds =========================\n\nEnvironment    Status    Duration\n-------------  --------  ------------\nrt_spark       SUCCESS   00:00:06.385\n========================= 1 succeeded in 00:00:06.385 =========================\n"
+  },
+  {
+   "name": "firmware footprint",
+   "pass": true,
+   "detail": "model tables 319 B, ML code 1060 B, golden vectors 74160 B, FreeRTOS heap 49152 B (CCM)",
+   "model_table_bytes": 319,
+   "ml_code_bytes": 1060,
+   "golden_bytes": 74160,
+   "heap_bytes": 49152,
+   "sections": {
+    ".isr_vector": 392,
+    ".text": 76388,
+    ".rodata": 87992,
+    ".ARM": 8,
+    ".init_array": 4,
+    ".fini_array": 4,
+    ".data": 500,
+    ".bss": 21736,
+    ".noinit": 68,
+    "._user_heap_stack": 4096,
+    ".ccmram": 49152,
+    ".ARM.attributes": 48,
+    ".comment": 126,
+    ".debug_frame": 1480
+   }
+  },
+  {
+   "name": "repository hygiene",
+   "pass": true,
+   "detail": "no issues",
+   "model_id": "dt-ac8173075c",
+   "placeholder": false
+  }
+ ]
+}

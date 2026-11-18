@@ -1,0 +1,126 @@
+{
+ "utc": "20261118T062924Z",
+ "steps": [
+  {
+   "step": "dataset gate",
+   "ok": true,
+   "detail": "train/class [66, 77, 46], test/class [22, 11, 14], 72 excluded windows"
+  },
+  {
+   "step": "train",
+   "ok": true,
+   "detail": [
+    "[validation] tree acc=0.851 macroF1=0.813 | baseline acc=0.723 macroF1=0.577",
+    "label consistency: 72 handling windows without motion excluded; as-collected validation tree acc=0.606 macroF1=0.581; activity not performed: ['S03/NORMAL_HANDLING_02']",
+    "requirements train_ok=True test_ok=True -> models\\dt-adfe15c9f6"
+   ]
+  },
+  {
+   "step": "held-out requirements",
+   "ok": true,
+   "detail": "tree acc 0.851 macroF1 0.813; baseline acc 0.723 macroF1 0.577"
+  },
+  {
+   "step": "model quality (held-out tree >= rule baseline)",
+   "ok": true,
+   "detail": "tree macroF1 0.813 vs baseline 0.577; as-collected tree acc 0.606 macroF1 0.581"
+  },
+  {
+   "step": "C parity (host)",
+   "ok": true,
+   "detail": "_exact\": 66,\n \"baseline_agreement\": 66,\n \"all_match\": true,\n \"host_compiler\": \"gcc.exe (i686-posix-dwarf-rev0, Built by MinGW-W64 project) 5.1.0\",\n \"host_cflags\": \"-std=gnu11 -O2 -Wall -Wextra -ffp-contract=off -fno-math-errno -fexcess-precision=standard -msse2 -mfpmath=sse -static\",\n \"harness_header\": \"# model=dt-adfe15c9f6 placeholder=0 nodes=5 depth=2 model_bytes=55\",\n \"compiler_warnings\": \"\"\n}"
+  },
+  {
+   "step": "offline checks + firmware build",
+   "ok": true,
+   "detail": "see evidence/offline/LATEST.md"
+  },
+  {
+   "step": "freeze (model, thresholds, headers, firmware image)",
+   "ok": true,
+   "detail": "frozen dt-adfe15c9f6 (19 files hashed, firmware.bin included) -> models/frozen.json"
+  },
+  {
+   "step": "next",
+   "ok": true,
+   "detail": "record the NEW test session(s) ['S06'] with the frozen firmware, then tools/ml/evaluate_test.py; gate 2 only after that evaluation"
+  }
+ ],
+ "data": {
+  "label_consistency": {
+   "thresholds": {
+    "gyro_max_dps": 2.11005,
+    "acc_std_g": 0.01149
+   },
+   "excluded_windows": 72,
+   "trials_label_not_performed": [
+    "S03/NORMAL_HANDLING_02"
+   ]
+  },
+  "trials": 28,
+  "windows": 308,
+  "excluded_windows": 72,
+  "train_per_class": [
+   66,
+   77,
+   46
+  ],
+  "test_per_class": [
+   22,
+   11,
+   14
+  ],
+  "unused_sessions": []
+ },
+ "model": {
+  "id": "dt-adfe15c9f6",
+  "test_tree": {
+   "accuracy": 0.851063829787234,
+   "macro_f1": 0.8133333333333335,
+   "confusion": [
+    [
+     22,
+     0,
+     0
+    ],
+    [
+     0,
+     9,
+     2
+    ],
+    [
+     0,
+     5,
+     9
+    ]
+   ]
+  },
+  "test_baseline": {
+   "accuracy": 0.723404255319149,
+   "macro_f1": 0.5771361026680176,
+   "confusion": [
+    [
+     22,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     10
+    ],
+    [
+     3,
+     0,
+     11
+    ]
+   ]
+  },
+  "requirements": {
+   "train_ok": true,
+   "test_ok": true
+  }
+ },
+ "frozen": true,
+ "gate2_ready": false
+}

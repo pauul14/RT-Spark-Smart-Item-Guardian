@@ -1,0 +1,10 @@
+2026-11-18T07:04:12.622+00:00	511645.109	#HOST,send,ver
+2026-11-18T07:04:12.726+00:00	511645.218	#CMD,ver
+2026-11-18T07:04:12.726+00:00	511645.218	#VER,fw=SmartItemGuardian,version=1.0.0,built=Nov 18 2026 13:15:42,model=dt-adfe15c9f6,placeholder=0,model_bytes=55,nodes=5,depth=2,freertos=V10.3.1,hal=0x01080300
+2026-11-18T07:04:12.774+00:00	511645.265	#HOST,send,status
+2026-11-18T07:04:12.835+00:00	511645.328	#CMD,status
+2026-11-18T07:04:12.835+00:00	511645.328	#STATUS,t_ms=9466,shown=STILL,last=STILL,conf=100,baseline=STILL,armed=0,lid=UNKNOWN,alert=NONE,acked=0,rough_events=0,lid_alerts=0,valid_windows=15,invalid_windows=0,capture=0,fault_injected=0,sensor_fault=0
+2026-11-18T07:04:12.836+00:00	511645.328	#INF,949,9496,1,STILL,100,STILL,STILL,48193,712,1
+2026-11-18T07:04:13.379+00:00	511645.875	#INF,999,9996,1,STILL,100,STILL,STILL,47680,708,1
+2026-11-18T07:04:13.379+00:00	511645.875	#HEALTH,t_ms=10014,heap_free=18192,heap_min=18192,hwm_sensor=290,hwm_infer=736,hwm_ui=779,hwm_health=666,hwm_console=700,samples=1001,invalid=0,missed=0,drdy_to=0,qfull=0,i2c_err=0,i2c_rec=0,swi2c_err=0,log_drop=0,uart_ovr=0,iwdg=10,stall=0,imu_read_avg_us=395,imu_read_max_us=397,sensor_busy_avg_us=438,sensor_busy_max_us=1020,log_trunc=0
+2026-11-18T07:04:13.379+00:00	511645.875	#ENV,t_ms=10014,aht_valid=1,temp_c=31.57,rh_pct=84.1,als=25,ps=0,ir=15,lid=UNKNOWN,mcu_c=46.4,vdda=3.302

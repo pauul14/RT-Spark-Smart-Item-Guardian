@@ -1,0 +1,53 @@
+Processing rt_spark (platform: ststm32@19.7.1; framework: stm32cube; board: rt_spark_f407zg)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/ststm32/rt_spark_f407zg.html
+PLATFORM: ST STM32 (19.7.1) > RT-Thread RT-Spark (Spark-1, HW1.1) STM32F407ZGT6
+HARDWARE: STM32F407ZGT6 168MHz, 128KB RAM, 1MB Flash
+DEBUG: Current (stlink) On-board (stlink)
+PACKAGES: 
+ - framework-stm32cubef4 @ 1.28.1 
+ - tool-dfuutil @ 1.11.0 
+ - tool-dfuutil-arduino @ 1.11.0 
+ - tool-ldscripts-ststm32 @ 0.2.0 
+ - tool-openocd @ 3.1200.7 (12.0) 
+ - tool-stm32duino @ 1.0.2 
+ - tool-stm32flash @ 0.7.0 
+ - toolchain-gccarmnoneeabi @ 1.70201.0 (7.2.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain+, Compatibility ~ soft
+Found 61 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FreeRTOS-Kernel @ 10.3.1
+|-- FatFs @ 0.12.3
+Building in release mode
+Checking size .pio\build\rt_spark\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  17.0% (used 22304 bytes from 131072 bytes)
+Flash: [==        ]  15.7% (used 164616 bytes from 1048576 bytes)
+Configuring upload protocol...
+AVAILABLE: stlink
+CURRENT: upload_protocol = stlink
+_guard(["upload"], [".pio\build\rt_spark\firmware.elf"])
+upload_guard: gate-1 PASS with backup flash_backup_20261118T050449Z.bin
+upload_guard: frozen build dt-adfe15c9f6 verified (firmware.bin hash matches)
+Uploading .pio\build\rt_spark\firmware.elf
+xPack Open On-Chip Debugger 0.12.0+dev-02228-ge5888bda3-dirty (2025-10-04-22:44)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+[stm32f4x.cpu] halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08012a88 msp: 0x20020000
+** Programming Started **
+** Programming Finished **
+** Verify Started **
+** Verified OK **
+** Resetting Target **
+shutdown command invoked
+========================= [SUCCESS] Took 14.34 seconds =========================
+
+Environment    Status    Duration
+-------------  --------  ------------
+rt_spark       SUCCESS   00:00:14.345
+========================= 1 succeeded in 00:00:14.345 =========================

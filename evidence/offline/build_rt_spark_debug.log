@@ -1,0 +1,173 @@
+﻿Processing rt_spark_debug (platform: ststm32@19.7.1; framework: stm32cube; board: rt_spark_f407zg)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/ststm32/rt_spark_f407zg.html
+PLATFORM: ST STM32 (19.7.1) > RT-Thread RT-Spark (Spark-1, HW1.1) STM32F407ZGT6
+HARDWARE: STM32F407ZGT6 168MHz, 128KB RAM, 1MB Flash
+DEBUG: Current (stlink) On-board (stlink)
+PACKAGES: 
+ - framework-stm32cubef4 @ 1.28.1 
+ - tool-ldscripts-ststm32 @ 0.2.0 
+ - toolchain-gccarmnoneeabi @ 1.70201.0 (7.2.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain+, Compatibility ~ soft
+Found 61 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FreeRTOS-Kernel @ 10.3.1
+|-- FatFs @ 0.12.3
+Building in debug mode
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_adc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_adc_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_can.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_cec.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_cortex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_crc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_cryp.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_cryp_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dac.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dac_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dcmi.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dcmi_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dfsdm.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dma.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dma2d.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dma_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_dsi.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_eth.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_exti.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_flash.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_flash_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_flash_ramfunc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_fmpi2c.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_fmpi2c_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_fmpsmbus.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_fmpsmbus_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_gpio.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_hash.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_hash_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_hcd.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_i2c.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_i2c_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_i2s.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_i2s_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_irda.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_iwdg.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_lptim.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_ltdc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_ltdc_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_mmc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_nand.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_nor.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_pccard.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_pcd.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_pcd_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_pwr.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_pwr_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_qspi.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_rcc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_rcc_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_rng.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_rtc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_rtc_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_sai.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_sai_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_sd.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_sdram.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_smartcard.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_smbus.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_spdifrx.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_spi.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_sram.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_tim.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_tim_ex.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_uart.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_usart.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_hal_wwdg.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_adc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_crc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_dac.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_dma.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_dma2d.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_exti.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_fmc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_fmpi2c.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_fsmc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_gpio.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_i2c.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_lptim.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_pwr.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_rcc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_rng.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_rtc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_sdmmc.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_spi.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_tim.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_usart.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_usb.o
+Compiling .pio\build\rt_spark_debug\FrameworkHALDriver\Src\stm32f4xx_ll_utils.o
+Compiling .pio\build\rt_spark_debug\src\app\app_core.o
+Compiling .pio\build\rt_spark_debug\src\app\cli.o
+Compiling .pio\build\rt_spark_debug\src\app\eventlog.o
+Compiling .pio\build\rt_spark_debug\src\app\golden.o
+Compiling .pio\build\rt_spark_debug\src\app\sd_logger.o
+Compiling .pio\build\rt_spark_debug\src\app\task_console.o
+Compiling .pio\build\rt_spark_debug\src\app\task_health.o
+Compiling .pio\build\rt_spark_debug\src\app\task_infer.o
+Compiling .pio\build\rt_spark_debug\src\app\task_sensor.o
+Compiling .pio\build\rt_spark_debug\src\app\task_ui.o
+Compiling .pio\build\rt_spark_debug\src\bsp\clock.o
+Compiling .pio\build\rt_spark_debug\src\bsp\fault.o
+Compiling .pio\build\rt_spark_debug\src\bsp\timebase.o
+Compiling .pio\build\rt_spark_debug\src\core\features.o
+Compiling .pio\build\rt_spark_debug\src\core\guardian_logic.o
+Compiling .pio\build\rt_spark_debug\src\core\ir_nec_codec.o
+Compiling .pio\build\rt_spark_debug\src\core\latency_stats.o
+Compiling .pio\build\rt_spark_debug\src\core\lid_detect.o
+Compiling .pio\build\rt_spark_debug\src\core\mini_printf.o
+Compiling .pio\build\rt_spark_debug\src\core\model_infer.o
+Compiling .pio\build\rt_spark_debug\src\drivers\board_io.o
+Compiling .pio\build\rt_spark_debug\src\drivers\font5x7.o
+Compiling .pio\build\rt_spark_debug\src\drivers\i2c_buses.o
+Compiling .pio\build\rt_spark_debug\src\drivers\ir_nec.o
+Compiling .pio\build\rt_spark_debug\src\drivers\led_matrix.o
+Compiling .pio\build\rt_spark_debug\src\drivers\module_diag.o
+Compiling .pio\build\rt_spark_debug\src\drivers\rtc_clock.o
+Compiling .pio\build\rt_spark_debug\src\drivers\sd_card.o
+Compiling .pio\build\rt_spark_debug\src\drivers\sensors.o
+Compiling .pio\build\rt_spark_debug\src\drivers\sig_lcd.o
+Compiling .pio\build\rt_spark_debug\src\drivers\spi_flash.o
+Compiling .pio\build\rt_spark_debug\src\drivers\uart_console.o
+Compiling .pio\build\rt_spark_debug\src\drivers\wired_link.o
+Compiling .pio\build\rt_spark_debug\src\main.o
+Compiling .pio\build\rt_spark_debug\libf79\FreeRTOS-Kernel\event_groups.o
+Compiling .pio\build\rt_spark_debug\libf79\FreeRTOS-Kernel\list.o
+Compiling .pio\build\rt_spark_debug\libf79\FreeRTOS-Kernel\portable\GCC\ARM_CM4F\port.o
+Compiling .pio\build\rt_spark_debug\libf79\FreeRTOS-Kernel\portable\MemMang\heap_4.o
+Compiling .pio\build\rt_spark_debug\libf79\FreeRTOS-Kernel\queue.o
+Compiling .pio\build\rt_spark_debug\libf79\FreeRTOS-Kernel\stream_buffer.o
+Compiling .pio\build\rt_spark_debug\libf79\FreeRTOS-Kernel\tasks.o
+Compiling .pio\build\rt_spark_debug\libf79\FreeRTOS-Kernel\timers.o
+Compiling .pio\build\rt_spark_debug\lib4dd\FatFs\ff.o
+Compiling .pio\build\rt_spark_debug\FrameworkCMSISDevice\gcc\startup_stm32f407xx.o
+Compiling .pio\build\rt_spark_debug\FrameworkCMSISDevice\system_stm32f4xx.o
+Archiving .pio\build\rt_spark_debug\libFrameworkCMSISDevice.a
+Archiving .pio\build\rt_spark_debug\libf79\libFreeRTOS-Kernel.a
+Archiving .pio\build\rt_spark_debug\lib4dd\libFatFs.a
+Linking .pio\build\rt_spark_debug\firmware.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      175060 B         1 MB     16.70%
+             RAM:       23192 B       128 KB     17.69%
+          CCMRAM:         48 KB        64 KB     75.00%
+Checking size .pio\build\rt_spark_debug\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  14.6% (used 19092 bytes from 131072 bytes)
+Flash: [==        ]  16.7% (used 174644 bytes from 1048576 bytes)
+Building .pio\build\rt_spark_debug\firmware.bin
+========================= [SUCCESS] Took 10.90 seconds =========================
+
+Environment     Status    Duration
+--------------  --------  ------------
+rt_spark_debug  SUCCESS   00:00:10.902
+========================= 1 succeeded in 00:00:10.902 =========================

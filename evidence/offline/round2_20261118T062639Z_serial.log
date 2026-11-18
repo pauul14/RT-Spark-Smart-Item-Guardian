@@ -1,0 +1,9 @@
+2026-11-18T06:29:24.462+00:00	509556.953	#HOST,send,say 600 PC is TRAINING (3-5 min). Box can rest. Wait for S06 steps on PC.
+2026-11-18T06:29:24.569+00:00	509557.062	#CMD,say
+2026-11-18T06:29:24.569+00:00	509557.062	#PROMPT,153,say,600
+2026-11-18T06:29:24.569+00:00	509557.062	#INF,499999,4999928,1,STILL,100,STILL,STILL,105940,1054,1
+2026-11-18T06:29:24.677+00:00	509557.171	#HEALTH,t_ms=5000014,heap_free=18192,heap_min=18192,hwm_sensor=288,hwm_infer=758,hwm_ui=731,hwm_health=704,hwm_console=672,samples=500008,invalid=0,missed=0,drdy_to=0,qfull=0,i2c_err=0,i2c_rec=0,swi2c_err=0,log_drop=0,uar
+2026-11-18T06:29:24.678+00:00	509557.171	#ENV,t_ms=5000014,aht_valid=1,temp_c=31.16,rh_pct=82.6,als=16,ps=1,ir=10,lid=CLOSED,mcu_c=47.0,vdda=3.302
+2026-11-18T06:51:56.130+00:00	510908.625	#HOST,send,say 600 ROUND 2 FINISHED. Results on PC. Wait for next instructions.
+2026-11-18T06:51:56.245+00:00	510908.734	#CMD,say
+2026-11-18T06:51:56.245+00:00	510908.734	#PROMPT,180,say,600

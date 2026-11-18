@@ -1,0 +1,82 @@
+{
+ "utc": "20261118T051527Z",
+ "all_pass": true,
+ "results": [
+  {
+   "name": "python unit tests",
+   "pass": true,
+   "detail": "Ran 10 tests OK",
+   "log": "test_rule_order (test_sigml.BaselineTests.test_rule_order) ... ok\ntest_adjacent_float_threshold (test_sigml.CartTests.test_adjacent_float_threshold) ... ok\ntest_depth_bound_and_leaf_size (test_sigml.CartTests.test_depth_bound_and_leaf_size) ... ok\ntest_separable (test_sigml.CartTests.test_separable) ... ok\ntest_all_binary32 (test_sigml.FeatureTests.test_all_binary32) ... ok\ntest_jerk_and_high_g (test_sigml.FeatureTests.test_jerk_and_high_g) ... ok\ntest_still_gravity (test_sigml.FeatureTests.test_still_gravity) ... ok\ntest_confusion_and_prf (test_sigml.MetricsTests.test_confusion_and_prf) ... ok\ntest_gap_and_invalid_windows_excluded (test_sigml.SplitTests.test_gap_and_invalid_windows_excluded) ... ok\ntest_overlapping_sessions_rejected (test_sigml.SplitTests.test_overlapping_sessions_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.024s\n\nOK\n"
+  },
+  {
+   "name": "host C unit tests",
+   "pass": true,
+   "detail": "55 passed, 0 failed, compiler warnings 0",
+   "log": "host core tests: 55 passed, 0 failed\n"
+  },
+  {
+   "name": "exported C model parity (host)",
+   "pass": true,
+   "detail": "model ph-fd5d5654a0 placeholder=True: classes 66/66, features bit-exact 66/66, baseline 66/66",
+   "log": "{\n \"model_id\": \"ph-fd5d5654a0\",\n \"placeholder\": true,\n \"windows\": 66,\n \"windows_from\": \"held-out test sessions (heldout_windows.jsonl)\",\n \"prediction_agreement\": 66,\n \"features_bit_exact\": 66,\n \"baseline_agreement\": 66,\n \"all_match\": true,\n \"host_compiler\": \"gcc.exe (i686-posix-dwarf-rev0, Built by MinGW-W64 project) 5.1.0\",\n \"host_cflags\": \"-std=gnu11 -O2 -Wall -Wextra -ffp-contract=off -fno-math-errno -fexcess-precision=standard -msse2 -mfpmath=sse -static\",\n \"harness_header\": \"# model=ph-fd5d5654a0 placeholder=1 nodes=5 depth=2 model_bytes=55\",\n \"compiler_warnings\": \"\"\n}\n"
+  },
+  {
+   "name": "firmware build (pio run -e rt_spark)",
+   "pass": true,
+   "detail": "FLASH 164872 B / 1 MB (15.72%); RAM 26400 B / 128 KB (20.14%); CCMRAM 48 KB / 64 KB (75.00%); warnings 0",
+   "memory": [
+    {
+     "region": "FLASH",
+     "used": "164872 B",
+     "size": "1 MB",
+     "pct": "15.72%"
+    },
+    {
+     "region": "RAM",
+     "used": "26400 B",
+     "size": "128 KB",
+     "pct": "20.14%"
+    },
+    {
+     "region": "CCMRAM",
+     "used": "48 KB",
+     "size": "64 KB",
+     "pct": "75.00%"
+    }
+   ],
+   "log": "c.o\nCompiling .pio\\build\\rt_spark\\src\\core\\ir_nec_codec.o\nCompiling .pio\\build\\rt_spark\\src\\core\\latency_stats.o\nCompiling .pio\\build\\rt_spark\\src\\core\\lid_detect.o\nCompiling .pio\\build\\rt_spark\\src\\core\\mini_printf.o\nCompiling .pio\\build\\rt_spark\\src\\core\\model_infer.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\board_io.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\font5x7.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\i2c_buses.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\ir_nec.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\led_matrix.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\module_diag.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\rtc_clock.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\sd_card.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\sensors.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\sig_lcd.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\spi_flash.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\uart_console.o\nCompiling .pio\\build\\rt_spark\\src\\drivers\\wired_link.o\nCompiling .pio\\build\\rt_spark\\src\\main.o\nCompiling .pio\\build\\rt_spark\\libf79\\FreeRTOS-Kernel\\event_groups.o\nCompiling .pio\\build\\rt_spark\\libf79\\FreeRTOS-Kernel\\list.o\nCompiling .pio\\build\\rt_spark\\libf79\\FreeRTOS-Kernel\\portable\\GCC\\ARM_CM4F\\port.o\nCompiling .pio\\build\\rt_spark\\libf79\\FreeRTOS-Kernel\\portable\\MemMang\\heap_4.o\nCompiling .pio\\build\\rt_spark\\libf79\\FreeRTOS-Kernel\\queue.o\nCompiling .pio\\build\\rt_spark\\libf79\\FreeRTOS-Kernel\\stream_buffer.o\nCompiling .pio\\build\\rt_spark\\libf79\\FreeRTOS-Kernel\\tasks.o\nCompiling .pio\\build\\rt_spark\\libf79\\FreeRTOS-Kernel\\timers.o\nCompiling .pio\\build\\rt_spark\\lib4dd\\FatFs\\ff.o\nCompiling .pio\\build\\rt_spark\\FrameworkCMSISDevice\\system_stm32f4xx.o\nLinking .pio\\build\\rt_spark\\firmware.elf\nMemory region         Used Size  Region Size  %age Used\n           FLASH:      164872 B         1 MB     15.72%\n             RAM:       26400 B       128 KB     20.14%\n          CCMRAM:         48 KB        64 KB     75.00%\nChecking size .pio\\build\\rt_spark\\firmware.elf\nAdvanced Memory Usage is available via \"PlatformIO Home > Project Inspect\"\nRAM:   [==        ]  17.0% (used 22304 bytes from 131072 bytes)\nFlash: [==        ]  15.7% (used 164456 bytes from 1048576 bytes)\nBuilding .pio\\build\\rt_spark\\firmware.bin\n========================= [SUCCESS] Took 14.07 seconds =========================\n\nEnvironment    Status    Duration\n-------------  --------  ------------\nrt_spark       SUCCESS   00:00:14.067\n========================= 1 succeeded in 00:00:14.067 =========================\n"
+  },
+  {
+   "name": "firmware footprint",
+   "pass": true,
+   "detail": "model tables 55 B, ML code 1060 B, golden vectors 74160 B, FreeRTOS heap 49152 B (CCM)",
+   "model_table_bytes": 55,
+   "ml_code_bytes": 1060,
+   "golden_bytes": 74160,
+   "heap_bytes": 49152,
+   "sections": {
+    ".isr_vector": 392,
+    ".text": 76388,
+    ".rodata": 87568,
+    ".ARM": 8,
+    ".init_array": 4,
+    ".fini_array": 4,
+    ".data": 500,
+    ".bss": 21736,
+    ".noinit": 68,
+    "._user_heap_stack": 4096,
+    ".ccmram": 49152,
+    ".ARM.attributes": 48,
+    ".comment": 126,
+    ".debug_frame": 1480
+   }
+  },
+  {
+   "name": "repository hygiene",
+   "pass": true,
+   "detail": "no issues",
+   "model_id": "ph-fd5d5654a0",
+   "placeholder": true
+  }
+ ]
+}

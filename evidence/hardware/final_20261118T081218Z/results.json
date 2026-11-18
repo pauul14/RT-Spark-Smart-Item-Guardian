@@ -1,0 +1,455 @@
+{
+ "phases": {
+  "P0": {
+   "golden": {
+    "count": "30",
+    "python_target_agree": "30",
+    "target_correct": "24",
+    "features_bit_exact": "30",
+    "worst_feat_abs_diff": "0.000000",
+    "cycles_min": "49562",
+    "cycles_mean": "49653",
+    "cycles_max": "49835",
+    "us_mean": "295"
+   },
+   "host_adapters_at_start": [
+    {
+     "adapter": 1,
+     "status": "Up"
+    },
+    {
+     "adapter": 2,
+     "status": "Up"
+    }
+   ],
+   "host_all_adapters_down_at_start": false,
+   "network_disconnected_by_operator": true,
+   "sd_status_at_start": "#SDLOG,enabled=1,mounted=0,card_present=0,cd_pin=1,last_result=NOT_READY,lines=0,errors=0,read_err=0,write_err=0",
+   "ir_status_at_start": "#IR,status,rx_idle=1,rx_edges=142,rx_frames=2,rx_errors=0,own_test_echoes=0,tx_frames=2,relay=1,test=0x00000000,ack=0x00000000,next=0x00000000",
+   "wire_status_at_start": "#WIRE,can=0,can_tx_ok=0,can_tx_fail=0,can_ack_err=0,can_busy=0,tec=0,rec=0,lec=0,err_passive=0,bus_off=0,rs485=0,rs485_lines=0,rs485_rx_bytes=0,rs485_queries=0",
+   "host_adapters_at_end": [
+    {
+     "adapter": 1,
+     "status": "Up"
+    },
+    {
+     "adapter": 2,
+     "status": "Disconnected"
+    }
+   ],
+   "host_all_adapters_down_at_end": false,
+   "network_still_disconnected_at_end": true
+  },
+  "P1": {
+   "trials": 60,
+   "per_class_trials": {
+    "STATIONARY": 20,
+    "NORMAL_HANDLING": 20,
+    "ROUGH_HANDLING": 20
+   },
+   "accuracy": 0.9333333333333333,
+   "confusion": {
+    "STATIONARY": {
+     "STATIONARY": 20,
+     "NORMAL_HANDLING": 0,
+     "ROUGH_HANDLING": 0,
+     "NO_DECISION": 0
+    },
+    "NORMAL_HANDLING": {
+     "STATIONARY": 1,
+     "NORMAL_HANDLING": 16,
+     "ROUGH_HANDLING": 3,
+     "NO_DECISION": 0
+    },
+    "ROUGH_HANDLING": {
+     "STATIONARY": 0,
+     "NORMAL_HANDLING": 0,
+     "ROUGH_HANDLING": 20,
+     "NO_DECISION": 0
+    }
+   },
+   "per_class": {
+    "STATIONARY": {
+     "precision": 0.9523809523809523,
+     "recall": 1.0,
+     "trials": 20
+    },
+    "NORMAL_HANDLING": {
+     "precision": 1.0,
+     "recall": 0.8,
+     "trials": 20
+    },
+    "ROUGH_HANDLING": {
+     "precision": 0.8695652173913043,
+     "recall": 1.0,
+     "trials": 20
+    }
+   },
+   "false_rough_alerts": 4,
+   "missed_rough_alerts": 4,
+   "prox_gestures_during_trials": []
+  },
+  "P2_prox_status_at_start": "#DIAG,als_ps,PASS,als=6,lux=2.1,ps=0,ir=10,ps_valid=1,prox_zone=FAR,prox_cal=measured,thr_far=263,thr_near=516,far_max=10,near_min=1023,gestures=0,invalid_ps=0",
+  "P2": {
+   "gesture_cycles": 10,
+   "acknowledged_by_gesture": 10,
+   "median_cue_to_ack_s": 1.19,
+   "sustained_near_prox_acks": 0,
+   "sustained_near_gesture_lines": [
+    "#PROX,gesture,alert_too_new,ps=1023,t_us=2276611434"
+   ],
+   "hands_away_gesture_lines": [],
+   "detail": [
+    {
+     "cycle": 1,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 3.61,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2210612552"
+     ]
+    },
+    {
+     "cycle": 2,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 1.19,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2217812422"
+     ]
+    },
+    {
+     "cycle": 3,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 0.42,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2225012291"
+     ]
+    },
+    {
+     "cycle": 4,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 0.0,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2230212198"
+     ]
+    },
+    {
+     "cycle": 5,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 1.19,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2236612080"
+     ]
+    },
+    {
+     "cycle": 6,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 1.17,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2242411981"
+     ]
+    },
+    {
+     "cycle": 7,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 1.17,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2248211887"
+     ]
+    },
+    {
+     "cycle": 8,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 0.94,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2255011780"
+     ]
+    },
+    {
+     "cycle": 9,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 1.49,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2263411644"
+     ]
+    },
+    {
+     "cycle": 10,
+     "alert_raised": true,
+     "acked_by_prox": true,
+     "cue_to_ack_s": 1.28,
+     "gesture_lines": [
+      "#PROX,gesture,ack,ps=1023,t_us=2269811540"
+     ]
+    }
+   ]
+  },
+  "P3": {
+   "fault_raised": true,
+   "fault_raise_latency_s": 0.109,
+   "status_commands_answered_during_fault": 10,
+   "valid_predictions_during_fault": 0,
+   "key_events_during_fault": 4,
+   "fault_cleared": true,
+   "valid_inference_resumed_after_s": 2.77,
+   "operator_saw_alert": true
+  },
+  "P4": {
+   "diag": [
+    "#DIAG,imu,PASS,whoami=0xaf,config=verified,drdy=irq,raw=-170,-130,4124,27,-42,1,die_temp=38.9C,samples=235038,invalid=2111",
+    "#DIAG,als_ps,PASS,als=9,lux=3.1,ps=10,ir=8,ps_valid=1,prox_zone=FAR,prox_cal=measured,thr_far=263,thr_near=516,far_max=10,near_min=1023,gestures=11,invalid_ps=0",
+    "#DIAG,aht21,PASS,temp=31.47C,rh=82.28%,init_status=0x18,errors=0",
+    "#DIAG,spi_flash,PASS,jedec=ef4017,size=8388608,sr1=0x00,first8=00000000f00ffff7 (read-only)",
+    "#DIAG,sdcard,N/A,SD: CD=1, init failed (err 0x00000004) - no card or unreadable",
+    "#DIAG,rtc,PASS,source=LSE,time_valid=1,now=2026-11-18 16:37:39",
+    "#DIAG,ir,PASS,IR: rx_idle=HIGH(ok) tx=sent decoded_self_echo=1 rx_edges=68 frames_total=76 decode_errors=0 (echo needs a reflector above the board)",
+    "#DIAG,wifi_rw007,PASS,RW007: INT before=1 after=1 transitions_1.5s=2 first_at=1ms (presence/boot signal only; no network joined)",
+    "#DIAG,codec_es8388,PASS,ES8388: ACK 0x10, reg00..04 = 06 5c c3 fc c0 (read-only; audio path unused)",
+    "#DIAG,can1,PASS,CAN1: silent loop-back 500k frame echoed OK (stopped at done; hal_err=0x00000000 esr=0x00000000 tsr=0x1c000003 msr=0x00000c08) - MCU controller only, no bus traffic",
+    "#DIAG,mcu_adc,PASS,MCU: die_temp=47.4C vdda=3.307V (factory calibration)",
+    "#DIAG,i2c2_scan,found=0x10 0x1e 0x68 (expected 0x10 ES8388, 0x1e AP3216C, 0x68 ICM-20608)",
+    "#DIAG,all,DONE"
+   ]
+  },
+  "P5": {
+   "wrapup": [
+    "#CMD,lat",
+    "#LAT,inference_us,n=256,total=2999,min=283,median=286,p95=287,max=289",
+    "#LAT,sample_to_decision_us,n=256,total=2999,min=707,median=710,p95=712,max=716",
+    "#LAT,sample_to_response_us,n=26,total=26,min=862,median=868,p95=870,max=870",
+    "#LAT,key_to_feedback_us,n=4,total=4,min=10,median=10,p95=11,max=11",
+    "#LAT,last_inference_cycles=47674,cpu_hz=168000000",
+    "#INF,235249,2352432,1,STILL,100,STILL,STILL,47868,709,1",
+    "#INF,235299,2352932,1,STILL,100,STILL,STILL,48068,710,1",
+    "#CMD,cnt",
+    "#CNT,imu_samples=235334,imu_invalid=2111,imu_bus_err=2111,imu_stuck=0,imu_missed=0,drdy_timeout=0,imu_qfull=0,imu_reinit=0,als_err=0,aht_err=0,i2c2_err=0,i2c2_recover=0,swi2c_err=0",
+    "#CNT,log_drop_lines=0,log_drop_bytes=0,uart_rx_overrun=0,uart_rx_dropped=0,ui_frames=11841,key_events=8,iwdg_refresh=2351,task_stall=0,evlog_written=0,evlog_failed=0,ui_qfull=0,svc_qfull=0",
+    "#INF,235349,2353432,1,STILL,100,STILL,STILL,48187,711,1",
+    "#INF,235399,2353932,1,STILL,100,STILL,STILL,47674,708,1",
+    "#CMD,tasks",
+    "#TASK,console,prio=1,state=X,stack_hwm_words=648,runtime_pct=0.0",
+    "#TASK,IDLE,prio=0,state=R,stack_hwm_words=149,runtime_pct=94.2",
+    "#TASK,sensor,prio=5,state=B,stack_hwm_words=242,runtime_pct=4.4",
+    "#TASK,health,prio=2,state=B,stack_hwm_words=572,runtime_pct=0.1",
+    "#TASK,infer,prio=4,state=B,stack_hwm_words=736,runtime_pct=0.1",
+    "#TASK,ui,prio=3,state=B,stack_hwm_words=741,runtime_pct=0.9",
+    "#HEAP,total=49152,free=18192,min_ever_free=18192",
+    "#INF,235449,2354432,1,STILL,100,STILL,STILL,47868,709,1",
+    "#INF,235499,2354932,1,STILL,100,STILL,STILL,48068,711,1",
+    "#CMD,heap",
+    "#HEAP,total=49152,free=18192,min_ever_free=18192",
+    "#INF,235549,2355432,1,STILL,100,STILL,STILL,48187,711,1",
+    "#INF,235599,2355932,1,STILL,100,STILL,STILL,47674,708,1",
+    "#CMD,status",
+    "#STATUS,t_ms=2356287,shown=STILL,last=STILL,conf=100,baseline=STILL,alert=NONE,acked=0,rough_events=26,test_alerts=15,ack_key=1,ack_prox=10,ack_ir=0,ack_console=22,prox_cal=1,prox_zone=FAR,prox_gestures=11,valid_windows=4663,invalid_windows=46,capture=0,fault_injected=0,sensor_fault=0",
+    "#INF,235649,2356432,1,STILL,100,STILL,STILL,47868,709,1",
+    "#INF,235699,2356932,1,STILL,100,STILL,STILL,48068,711,1"
+   ],
+   "sd_status_at_end": "#SDLOG,enabled=1,mounted=0,card_present=0,cd_pin=1,last_result=NOT_READY,lines=0,errors=0,read_err=0,write_err=0",
+   "ir_status_at_end": "#IR,status,rx_idle=1,rx_edges=5184,rx_frames=76,rx_errors=0,own_test_echoes=1,tx_frames=76,relay=1,test=0x00000000,ack=0x00000000,next=0x00000000",
+   "wire_status_at_end": "#WIRE,can=0,can_tx_ok=0,can_tx_fail=0,can_ack_err=0,can_busy=0,tec=0,rec=0,lec=0,err_passive=0,bus_off=0,rs485=0,rs485_lines=0,rs485_rx_bytes=0,rs485_queries=0"
+  }
+ },
+ "simulated": false,
+ "ui": "terminal",
+ "utc": "20261118T081218Z",
+ "args": {
+  "port": "COM3",
+  "sim": false,
+  "ui": "terminal",
+  "trials_per_class": 20,
+  "prox_cycles": 10,
+  "fault_seconds": 20,
+  "min_minutes": 15,
+  "allow_placeholder": false,
+  "phases": "P0,P1,P2,P3,P4,P5"
+ },
+ "keymap_firmware_to_printed": {
+  "UP": "UP",
+  "DOWN": "DOWN",
+  "LEFT": "LEFT",
+  "RIGHT": "RIGHT"
+ },
+ "keymap_source": "C:\\Users\\<USER>\\Documents\\PlatformIO\\Projects\\Smart-Item-Guardian\\evidence\\hardware\\keymap_check\\verify_20261118T080937Z.json",
+ "setup_note": "handheld prototype: bare RT-Spark board, no enclosure, not mounted to an item",
+ "firmware": {
+  "fw": "SmartItemGuardian",
+  "version": "1.0.0",
+  "built": "Nov 18 2026 15:53:39",
+  "model": "dt-adfe15c9f6",
+  "placeholder": "0",
+  "model_bytes": "55",
+  "nodes": "5",
+  "depth": "2",
+  "freertos": "V10.3.1",
+  "hal": "0x01080300"
+ },
+ "frozen_model_id": "dt-adfe15c9f6",
+ "analysis": {
+  "lines": 5171,
+  "host_duration_s": 1533.3,
+  "boots_seen": 0,
+  "faults_reported": [],
+  "inferences_total": 3067,
+  "inferences_valid": 3021,
+  "inference_us": {
+   "n": 3021,
+   "median": 286.12,
+   "p95": 287.81,
+   "min": 283.77,
+   "max": 293.78
+  },
+  "sample_to_decision_us": {
+   "n": 3021,
+   "median": 710,
+   "p95": 712,
+   "max": 725
+  },
+  "sample_to_response_us": {
+   "n": 26,
+   "median": 868.0,
+   "p95": 870,
+   "max": 870,
+   "lcd_banner_median": 5706.0
+  },
+  "key_to_feedback_us": {
+   "n": 4,
+   "median": 10.5,
+   "p95": 11,
+   "max": 11
+  },
+  "health_reports": 154,
+  "heap_min_ever_free": 18192,
+  "stack_hwm_words_min": {
+   "sensor": 242,
+   "infer": 736,
+   "ui": 741,
+   "health": 572,
+   "console": 612
+  },
+  "last_samples": 236018,
+  "last_invalid": 2111,
+  "last_missed": 0,
+  "last_drdy_to": 0,
+  "last_qfull": 0,
+  "last_i2c_err": 0,
+  "last_i2c_rec": 0,
+  "last_log_drop": 0,
+  "last_uart_ovr": 0,
+  "last_stall": 0,
+  "last_iwdg": 2357,
+  "golden": {
+   "count": "30",
+   "python_target_agree": "30",
+   "target_correct": "24",
+   "features_bit_exact": "30",
+   "worst_feat_abs_diff": "0.000000",
+   "cycles_min": "49562",
+   "cycles_mean": "49653",
+   "cycles_max": "49835",
+   "us_mean": "295"
+  },
+  "events": {
+   "TEST_ALERT": 15,
+   "ACK": 33,
+   "ROUGH": 26,
+   "PROX_GESTURE": 11,
+   "SENSOR_FAULT": 1,
+   "FAULT_CLEAR": 1
+  },
+  "fault_injection_timeline": [
+   {
+    "t": 1480.67,
+    "line": "#FAULTINJ,imu,on,t_ms=2310006"
+   },
+   {
+    "t": 1480.78,
+    "line": "#FAULT,imu,raised,consecutive_invalid=10,injected=1"
+   },
+   {
+    "t": 1501.81,
+    "line": "#FAULTINJ,imu,off,t_ms=2331120"
+   },
+   {
+    "t": 1502.03,
+    "line": "#FAULT,imu,cleared"
+   }
+  ]
+ },
+ "requirements": [
+  {
+   "id": "R1",
+   "requirement": ">= 20 independent product trials per class",
+   "status": "PASS",
+   "evidence": "{'STATIONARY': 20, 'NORMAL_HANDLING': 20, 'ROUGH_HANDLING': 20} accuracy 0.933"
+  },
+  {
+   "id": "R2",
+   "requirement": ">= 50 timed on-board inferences (median, p95)",
+   "status": "PASS",
+   "evidence": "n=3021 median=286.12 us p95=287.81 us"
+  },
+  {
+   "id": "R3",
+   "requirement": "sampling-to-response delay measured",
+   "status": "PASS",
+   "evidence": "sample->alert median 868.0 us p95 870 us; sample->decision median 710 us"
+  },
+  {
+   "id": "R4",
+   "requirement": ">= 15 min continuous operation, no reset",
+   "status": "PASS",
+   "evidence": "25.6 min, boots during run 0, stalls 0, missed samples 0, invalid 2111, log drops 0"
+  },
+  {
+   "id": "R5",
+   "requirement": ">= 5 consecutive minutes offline inference",
+   "status": "PASS",
+   "evidence": "longest uninterrupted inference stretch 24.7 min; operator network-off attestation True/True; host adapters all down start/end False/False"
+  },
+  {
+   "id": "R6",
+   "requirement": "controlled failure with responsive scheduling and user feedback",
+   "status": "PASS",
+   "evidence": "{\"fault_raised\": true, \"fault_raise_latency_s\": 0.109, \"status_commands_answered_during_fault\": 10, \"valid_predictions_during_fault\": 0, \"key_events_during_fault\": 4, \"fault_cleared\": true, \"valid_inference_resumed_after_s\": 2.77, \"operator_saw_alert\": true}"
+  },
+  {
+   "id": "R7",
+   "requirement": "exported model executes correctly on STM32 (golden held-out windows)",
+   "status": "PASS",
+   "evidence": "{\"count\": \"30\", \"python_target_agree\": \"30\", \"target_correct\": \"24\", \"features_bit_exact\": \"30\", \"worst_feat_abs_diff\": \"0.000000\", \"cycles_min\": \"49562\", \"cycles_mean\": \"49653\", \"cycles_max\": \"49835\", \"us_mean\": \"295\"}"
+  },
+  {
+   "id": "R8",
+   "requirement": "touchless acknowledgement: >= 90 % of deliberate gestures, none while a hand stays near, none with hands away",
+   "status": "PASS",
+   "evidence": "10/10 gestures acknowledged (median cue->ack 1.19 s); prox acks while hand held near 0; gestures with hands away 0; gestures during P1 handling []"
+  },
+  {
+   "id": "R9",
+   "requirement": "module diagnostics in the same firmware",
+   "status": "PASS",
+   "evidence": "10 PASS / 0 FAIL / 0 WARN"
+  },
+  {
+   "id": "R10",
+   "requirement": "heap / stack diagnostics recorded",
+   "status": "PASS",
+   "evidence": "heap min free 18192 B, stack HWM (words) {'sensor': 242, 'infer': 736, 'ui': 741, 'health': 572, 'console': 612}"
+  },
+  {
+   "id": "R11",
+   "requirement": "integrated module functions during the run (microSD log, IR relay, wired)",
+   "status": "INFO",
+   "evidence": "microSD lines written 0 (mounted 0); IR tx_frames 76 rx_frames 76 relay 1; wire end #WIRE,can=0,can_tx_ok=0,can_tx_fail=0,can_ack_err=0,can_busy=0,tec=0,rec=0,lec=0,err_passive=0,bus_off=0,rs485=0,rs485_lines=0,rs485_rx_bytes=0,rs485_queries=0"
+  }
+ ]
+}

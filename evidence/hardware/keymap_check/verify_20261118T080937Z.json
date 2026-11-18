@@ -1,0 +1,41 @@
+{
+ "utc": "20261118T080937Z",
+ "all_match": true,
+ "printed_to_firmware": {
+  "UP": "UP",
+  "DOWN": "DOWN",
+  "LEFT": "LEFT",
+  "RIGHT": "RIGHT"
+ },
+ "mapping_consistent_for_pressed_keys": true,
+ "presses": [
+  {
+   "requested_printed": "UP",
+   "typed_printed": "UP",
+   "firmware_key": "UP",
+   "verdict": "match",
+   "utc": "2026-11-18T08:09:50.405+00:00"
+  },
+  {
+   "requested_printed": "DOWN",
+   "typed_printed": "DOWN",
+   "firmware_key": "DOWN",
+   "verdict": "match",
+   "utc": "2026-11-18T08:10:01.239+00:00"
+  },
+  {
+   "requested_printed": "LEFT",
+   "typed_printed": "LEFT",
+   "firmware_key": "LEFT",
+   "verdict": "match",
+   "utc": "2026-11-18T08:10:12.100+00:00"
+  },
+  {
+   "requested_printed": "RIGHT",
+   "typed_printed": "RIGHT",
+   "firmware_key": "RIGHT",
+   "verdict": "match",
+   "utc": "2026-11-18T08:10:17.924+00:00"
+  }
+ ]
+}

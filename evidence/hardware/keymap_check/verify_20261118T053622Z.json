@@ -1,0 +1,26 @@
+{
+ "utc": "20261118T053622Z",
+ "all_match": false,
+ "presses": [
+  {
+   "printed_label_requested": "UP",
+   "firmware_key": "UP",
+   "utc": "2026-11-18T05:36:52.450+00:00"
+  },
+  {
+   "printed_label_requested": "DOWN",
+   "firmware_key": "UP",
+   "utc": "2026-11-18T05:36:57.391+00:00"
+  },
+  {
+   "printed_label_requested": "LEFT",
+   "firmware_key": "UP",
+   "utc": "2026-11-18T05:36:59.662+00:00"
+  },
+  {
+   "printed_label_requested": "RIGHT",
+   "firmware_key": "UP",
+   "utc": "2026-11-18T05:37:00.874+00:00"
+  }
+ ]
+}

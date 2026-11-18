@@ -1,0 +1,164 @@
+{
+ "utc": "20261118T081020Z",
+ "away": [
+  {
+   "ps": 0,
+   "ps_valid": true,
+   "als": 11,
+   "ir": 14,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 0,
+   "ps_valid": true,
+   "als": 11,
+   "ir": 11,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 0,
+   "ps_valid": true,
+   "als": 10,
+   "ir": 7,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 0,
+   "ps_valid": true,
+   "als": 14,
+   "ir": 11,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 4,
+   "ps_valid": true,
+   "als": 9,
+   "ir": 10,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1,
+   "ps_valid": true,
+   "als": 11,
+   "ir": 8,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 7,
+   "ps_valid": true,
+   "als": 9,
+   "ir": 8,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 40,
+   "ps_valid": true,
+   "als": 9,
+   "ir": 4,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 13,
+   "ir": 4,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 0,
+   "ir": 4,
+   "zone": "UNKNOWN"
+  }
+ ],
+ "near": [
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 13,
+   "ir": 3,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 8,
+   "ir": 5,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 9,
+   "ir": 5,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 7,
+   "ir": 11,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 11,
+   "ir": 5,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 2,
+   "ir": 3,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 3,
+   "ir": 1,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 9,
+   "ir": 5,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 8,
+   "ir": 5,
+   "zone": "UNKNOWN"
+  },
+  {
+   "ps": 1023,
+   "ps_valid": true,
+   "als": 10,
+   "ir": 5,
+   "zone": "UNKNOWN"
+  }
+ ],
+ "calibration_1": "#CAL,prox,fail_low_contrast,far_n=16,far_mean=2,far_min=0,far_max=11,near_n=16,near_min=0,near_mean=2,near_max=10,thr_far=0,thr_near=0,calibrated=0",
+ "calibration_2": "#CAL,prox,ok,far_n=16,far_mean=2,far_min=0,far_max=10,near_n=16,near_min=1023,near_mean=1023,near_max=1023,thr_far=263,thr_near=516,calibrated=1",
+ "calibration": {
+  "far_n": "16",
+  "far_mean": "2",
+  "far_min": "0",
+  "far_max": "10",
+  "near_n": "16",
+  "near_min": "1023",
+  "near_mean": "1023",
+  "near_max": "1023",
+  "thr_far": "263",
+  "thr_near": "516",
+  "calibrated": "1"
+ },
+ "status_after": "#DIAG,als_ps,PASS,als=1,lux=0.3,ps=1023,ir=7,ps_valid=1,prox_zone=NEAR,prox_cal=measured,thr_far=263,thr_near=516,far_max=10,near_min=1023,gestures=0,invalid_ps=0",
+ "pass": true
+}

@@ -1,0 +1,434 @@
+{
+ "utc": "20261118T050538Z",
+ "simulated": false,
+ "ui": "board",
+ "results": [
+  {
+   "item": "boot banner / reset cause",
+   "status": "PASS",
+   "evidence": "#BOOT,fw=SmartItemGuardian,version=1.0.0,built=Nov 18 2026 02:02:42,boot_count=1,reset=software,csr=0x1e000000",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.425+00:00"
+  },
+  {
+   "item": "boot log BOOT,fw",
+   "status": "INFO",
+   "evidence": "#BOOT,fw=SmartItemGuardian,version=1.0.0,built=Nov 18 2026 02:02:42,boot_count=1,reset=software,csr=0x1e000000",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.475+00:00"
+  },
+  {
+   "item": "boot log CLOCK",
+   "status": "INFO",
+   "evidence": "#CLOCK,hse_ok=1,sysclk=168000000,hclk=168000000,pclk1=42000000,pclk2=84000000",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.475+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,lcd,ok,id=0x81b3",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.475+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,matrix,ok,leds=19",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.475+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,imu,ok,whoami=0xaf,config_readback=ok",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,als_ps,ok",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,aht21,ok,status=0x18",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,spi_flash,ok,jedec=ef4017,size=8388608",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,rtc,FAIL,source=none,was_running=0,time_valid=0",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,ir,rx_idle=1,relay=1,paired_arm=0,paired_ack=0,paired_next=0",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "boot log INIT",
+   "status": "INFO",
+   "evidence": "#INIT,model,version=ph-fd5d5654a0,placeholder=1,nodes=5,max_depth=2,bytes=55",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "boot log RTOS",
+   "status": "INFO",
+   "evidence": "#RTOS,kernel=V10.3.1,heap_total=49152,heap_free_before_start=18944,tick_hz=1000",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "boot log RTOS",
+   "status": "INFO",
+   "evidence": "#RTOS,scheduler_running,tasks=6,iwdg_timeout_ms~8190",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.476+00:00"
+  },
+  {
+   "item": "console + firmware identity",
+   "status": "PASS",
+   "evidence": "#VER,fw=SmartItemGuardian,version=1.0.0,built=Nov 18 2026 02:02:40,model=ph-fd5d5654a0,placeholder=1,model_bytes=55,nodes=5,depth=2,freertos=V10.3.1,hal=0x01080300",
+   "note": "",
+   "utc": "2026-11-18T05:06:04.578+00:00"
+  },
+  {
+   "item": "FreeRTOS task/heap",
+   "status": "INFO",
+   "evidence": "#TASK,console,prio=1,state=X,stack_hwm_words=774,runtime_pct=0.0",
+   "note": "",
+   "utc": "2026-11-18T05:06:06.683+00:00"
+  },
+  {
+   "item": "FreeRTOS task/heap",
+   "status": "INFO",
+   "evidence": "#TASK,IDLE,prio=0,state=R,stack_hwm_words=149,runtime_pct=36.3",
+   "note": "",
+   "utc": "2026-11-18T05:06:06.683+00:00"
+  },
+  {
+   "item": "FreeRTOS task/heap",
+   "status": "INFO",
+   "evidence": "#TASK,sensor,prio=5,state=B,stack_hwm_words=386,runtime_pct=57.9",
+   "note": "",
+   "utc": "2026-11-18T05:06:06.683+00:00"
+  },
+  {
+   "item": "FreeRTOS task/heap",
+   "status": "INFO",
+   "evidence": "#TASK,health,prio=2,state=B,stack_hwm_words=708,runtime_pct=0.5",
+   "note": "",
+   "utc": "2026-11-18T05:06:06.683+00:00"
+  },
+  {
+   "item": "FreeRTOS task/heap",
+   "status": "INFO",
+   "evidence": "#TASK,infer,prio=4,state=B,stack_hwm_words=923,runtime_pct=0.0",
+   "note": "",
+   "utc": "2026-11-18T05:06:06.683+00:00"
+  },
+  {
+   "item": "FreeRTOS task/heap",
+   "status": "INFO",
+   "evidence": "#TASK,ui,prio=3,state=B,stack_hwm_words=779,runtime_pct=5.0",
+   "note": "",
+   "utc": "2026-11-18T05:06:06.683+00:00"
+  },
+  {
+   "item": "FreeRTOS task/heap",
+   "status": "INFO",
+   "evidence": "#HEAP,total=49152,free=18192,min_ever_free=18192",
+   "note": "",
+   "utc": "2026-11-18T05:06:06.683+00:00"
+  },
+  {
+   "item": "diag imu",
+   "status": "PASS",
+   "evidence": "#DIAG,imu,PASS,whoami=0xaf,config=verified,drdy=irq,raw=-159,-123,4105,27,-36,1,die_temp=37.6C,samples=261,invalid=0",
+   "note": "",
+   "utc": "2026-11-18T05:06:06.992+00:00"
+  },
+  {
+   "item": "diag als",
+   "status": "PASS",
+   "evidence": "#DIAG,als_ps,PASS,als=30,lux=10.5,ps=5,ir=30,ps_valid=1,lid=OPEN,cal=default,signal=ALS,thr=10..30",
+   "note": "",
+   "utc": "2026-11-18T05:06:07.394+00:00"
+  },
+  {
+   "item": "diag aht",
+   "status": "PASS",
+   "evidence": "#DIAG,aht21,PASS,temp=31.42C,rh=81.37%,init_status=0x18,errors=0",
+   "note": "",
+   "utc": "2026-11-18T05:06:07.847+00:00"
+  },
+  {
+   "item": "diag flash",
+   "status": "PASS",
+   "evidence": "#DIAG,spi_flash,PASS,jedec=ef4017,size=8388608,sr1=0x00,first8=00000000f00ffff7 (read-only)",
+   "note": "",
+   "utc": "2026-11-18T05:06:08.299+00:00"
+  },
+  {
+   "item": "diag sd",
+   "status": "N/A",
+   "evidence": "#DIAG,sdcard,N/A,SD: CD=1, init failed (err 0x00000004) - no card or unreadable",
+   "note": "",
+   "utc": "2026-11-18T05:06:08.701+00:00"
+  },
+  {
+   "item": "diag rtc",
+   "status": "FAIL",
+   "evidence": "#DIAG,rtc,FAIL,source=none,time_valid=0,now=4614-00-00 233:116:00",
+   "note": "",
+   "utc": "2026-11-18T05:06:09.153+00:00"
+  },
+  {
+   "item": "diag wifi",
+   "status": "PASS",
+   "evidence": "#DIAG,wifi_rw007,PASS,RW007: INT before=1 after=1 transitions_1.5s=2 first_at=1ms (presence/boot signal only; no network joined)",
+   "note": "",
+   "utc": "2026-11-18T05:06:11.117+00:00"
+  },
+  {
+   "item": "diag codec",
+   "status": "PASS",
+   "evidence": "#DIAG,codec_es8388,PASS,ES8388: ACK 0x10, reg00..04 = 06 5c c3 fc c0 (read-only; audio path unused)",
+   "note": "",
+   "utc": "2026-11-18T05:06:11.569+00:00"
+  },
+  {
+   "item": "diag can",
+   "status": "FAIL",
+   "evidence": "#DIAG,can1,FAIL,CAN1: silent loop-back 500k frame not received (MCU controller only; no bus attached)",
+   "note": "",
+   "utc": "2026-11-18T05:06:11.971+00:00"
+  },
+  {
+   "item": "diag mcu",
+   "status": "PASS",
+   "evidence": "#DIAG,mcu_adc,PASS,MCU: die_temp=42.6C vdda=3.302V (factory calibration)",
+   "note": "",
+   "utc": "2026-11-18T05:06:12.423+00:00"
+  },
+  {
+   "item": "diag i2cscan",
+   "status": "INFO",
+   "evidence": "#DIAG,i2c2_scan,found=0x10 0x1e 0x68 (expected 0x10 ES8388, 0x1e AP3216C, 0x68 ICM-20608)",
+   "note": "",
+   "utc": "2026-11-18T05:06:12.875+00:00"
+  },
+  {
+   "item": "IMU sampling interval",
+   "status": "PASS",
+   "evidence": "n=1010 median_dt_us=10000 min=9999 max=10000 missing=0 polled_flag=0",
+   "note": "",
+   "utc": "2026-11-18T05:06:23.383+00:00"
+  },
+  {
+   "item": "lcd operator check",
+   "status": "NO-ANSWER",
+   "evidence": "#DIAG,lcd,DONE,full_screen_fill_us=13822,id=0x81b3 (operator confirms R,G,B,W,K bars)",
+   "note": "",
+   "utc": "2026-11-18T05:06:54.532+00:00"
+  },
+  {
+   "item": "matrix operator check",
+   "status": "NO-ANSWER",
+   "evidence": "#DIAG,matrix,DONE,frames=517 (operator confirms colours R,G,B,W and the 19-LED chase)",
+   "note": "",
+   "utc": "2026-11-18T05:07:27.492+00:00"
+  },
+  {
+   "item": "buzzer operator check",
+   "status": "NO-ANSWER",
+   "evidence": "#DIAG,buzzer,DONE,pattern=rough (operator confirms 3 beeps)",
+   "note": "",
+   "utc": "2026-11-18T05:07:57.774+00:00"
+  },
+  {
+   "item": "leds operator check",
+   "status": "NO-ANSWER",
+   "evidence": "#DIAG,leds,DONE (operator confirms red/blue alternate x3)",
+   "note": "",
+   "utc": "2026-11-18T05:08:29.509+00:00"
+  },
+  {
+   "item": "key UP",
+   "status": "FAIL",
+   "evidence": "no #KEY line within 25 s",
+   "note": "",
+   "utc": "2026-11-18T05:08:54.848+00:00"
+  },
+  {
+   "item": "key DOWN",
+   "status": "FAIL",
+   "evidence": "no #KEY line within 25 s",
+   "note": "",
+   "utc": "2026-11-18T05:08:54.848+00:00"
+  },
+  {
+   "item": "key LEFT",
+   "status": "FAIL",
+   "evidence": "no #KEY line within 25 s",
+   "note": "",
+   "utc": "2026-11-18T05:08:54.848+00:00"
+  },
+  {
+   "item": "key RIGHT",
+   "status": "FAIL",
+   "evidence": "no #KEY line within 25 s",
+   "note": "",
+   "utc": "2026-11-18T05:08:54.849+00:00"
+  },
+  {
+   "item": "ALS/PS uncovered",
+   "status": "INFO",
+   "evidence": "#DIAG,als_ps,PASS,als=25,lux=8.8,ps=4,ir=18,ps_valid=1,lid=OPEN,cal=default,signal=ALS,thr=10..30",
+   "note": "",
+   "utc": "2026-11-18T05:09:03.107+00:00"
+  },
+  {
+   "item": "ALS/PS covered",
+   "status": "INFO",
+   "evidence": "#DIAG,als_ps,PASS,als=23,lux=8.1,ps=4,ir=16,ps_valid=1,lid=OPEN,cal=default,signal=ALS,thr=10..30",
+   "note": "",
+   "utc": "2026-11-18T05:09:10.316+00:00"
+  },
+  {
+   "item": "ALS/PS uncovered again",
+   "status": "INFO",
+   "evidence": "#DIAG,als_ps,PASS,als=23,lux=8.1,ps=22,ir=20,ps_valid=1,lid=OPEN,cal=default,signal=ALS,thr=10..30",
+   "note": "",
+   "utc": "2026-11-18T05:09:17.521+00:00"
+  },
+  {
+   "item": "AP3216C responds to cover (PS up or ALS down by >= 12 counts)",
+   "status": "FAIL",
+   "evidence": "ps=[4, 4, 22] als=[25, 23, 23]",
+   "note": "",
+   "utc": "2026-11-18T05:09:17.521+00:00"
+  },
+  {
+   "item": "lid calibration",
+   "status": "FAIL",
+   "evidence": "#CAL,lid,started: close the lid within 5 s, then open it when the screen says OPEN",
+   "note": "",
+   "utc": "2026-11-18T05:09:26.249+00:00"
+  },
+  {
+   "item": "microSD event log",
+   "status": "PENDING",
+   "evidence": "#SDLOG,enabled=1,mounted=0,card_present=0,cd_pin=1,last_result=NOT_READY,lines=0,errors=0,read_err=0,write_err=0 - insert a FAT32 microSD card to verify (it is mounted within 30 s)",
+   "note": "",
+   "utc": "2026-11-18T05:09:26.501+00:00"
+  },
+  {
+   "item": "IR emitter -> receiver decoded self-echo",
+   "status": "PASS",
+   "evidence": "#DIAG,ir,PASS,IR: rx_idle=HIGH(ok) tx=sent decoded_self_echo=1 rx_edges=68 frames_total=3 decode_errors=1 (echo needs a reflector above the board)",
+   "note": "",
+   "utc": "2026-11-18T05:09:30.960+00:00"
+  },
+  {
+   "item": "IR remote pairing/control",
+   "status": "PENDING",
+   "evidence": "no remote available",
+   "note": "",
+   "utc": "2026-11-18T05:09:31.971+00:00"
+  },
+  {
+   "item": "CAN telemetry",
+   "status": "PARTIAL",
+   "evidence": "#WIRE,can=1,can_tx_ok=0,can_tx_fail=1,can_ack_err=1,can_busy=0,tec=8,rec=0,lec=3,err_passive=0,bus_off=0,rs485=0,rs485_lines=0,rs485_rx_bytes=0,rs485_queries=0",
+   "note": "frames sent but not acknowledged: no bus partner (expected without a second node)",
+   "utc": "2026-11-18T05:09:38.624+00:00"
+  },
+  {
+   "item": "RS485 telemetry",
+   "status": "PARTIAL",
+   "evidence": "#WIRE,can=0,can_tx_ok=0,can_tx_fail=1,can_ack_err=1,can_busy=0,tec=8,rec=0,lec=3,err_passive=0,bus_off=0,rs485=1,rs485_lines=2,rs485_rx_bytes=0,rs485_queries=0",
+   "note": "lines transmitted; reception needs a partner/USB-RS485 adapter",
+   "utc": "2026-11-18T05:09:45.726+00:00"
+  },
+  {
+   "item": "on-target model self-test (golden)",
+   "status": "INFO",
+   "evidence": "#GOLDEN,SUMMARY,count=30,python_target_agree=30,target_correct=30,features_bit_exact=30,worst_feat_abs_diff=0.000000,cycles_min=106692,cycles_mean=114141,cycles_max=179265,us_mean=679",
+   "note": "",
+   "utc": "2026-11-18T05:09:46.681+00:00"
+  },
+  {
+   "item": "counters",
+   "status": "INFO",
+   "evidence": "#LAT,inference_us,n=256,total=441,min=629,median=631,p95=633,max=637",
+   "note": "",
+   "utc": "2026-11-18T05:09:51.183+00:00"
+  },
+  {
+   "item": "counters",
+   "status": "INFO",
+   "evidence": "#LAT,sample_to_decision_us,n=256,total=441,min=1053,median=1056,p95=1057,max=1062",
+   "note": "",
+   "utc": "2026-11-18T05:09:51.183+00:00"
+  },
+  {
+   "item": "counters",
+   "status": "INFO",
+   "evidence": "#LAT,sample_to_response_us,n=2,total=2,min=1210,median=1210,p95=1212,max=1212",
+   "note": "",
+   "utc": "2026-11-18T05:09:51.183+00:00"
+  },
+  {
+   "item": "counters",
+   "status": "INFO",
+   "evidence": "#LAT,key_to_feedback_us,n=9,total=9,min=10,median=11,p95=21961,max=21961",
+   "note": "",
+   "utc": "2026-11-18T05:09:51.183+00:00"
+  },
+  {
+   "item": "counters",
+   "status": "INFO",
+   "evidence": "#LAT,last_inference_cycles=106524,cpu_hz=168000000",
+   "note": "",
+   "utc": "2026-11-18T05:09:51.183+00:00"
+  },
+  {
+   "item": "counters",
+   "status": "INFO",
+   "evidence": "#CNT,imu_samples=22386,imu_invalid=0,imu_bus_err=0,imu_stuck=0,imu_missed=0,drdy_timeout=0,imu_qfull=0,imu_reinit=0,als_err=0,aht_err=0,i2c2_err=0,i2c2_recover=0,swi2c_err=0",
+   "note": "",
+   "utc": "2026-11-18T05:09:51.183+00:00"
+  },
+  {
+   "item": "counters",
+   "status": "INFO",
+   "evidence": "#CNT,log_drop_lines=0,log_drop_bytes=0,uart_rx_overrun=0,uart_rx_dropped=0,ui_frames=1096,key_events=9,iwdg_refresh=222,task_stall=0,evlog_written=0,evlog_failed=0,ui_qfull=0,svc_qfull=0",
+   "note": "",
+   "utc": "2026-11-18T05:09:51.183+00:00"
+  },
+  {
+   "item": "counters",
+   "status": "INFO",
+   "evidence": "#IR,status,rx_idle=1,rx_edges=604,rx_frames=3,rx_errors=2,own_test_echoes=1,tx_frames=3,relay=1,arm=0x00000000,ack=0x00000000,next=0x00000000",
+   "note": "",
+   "utc": "2026-11-18T05:09:51.183+00:00"
+  }
+ ]
+}

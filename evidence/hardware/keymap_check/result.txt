@@ -1,0 +1,2 @@
+{'UP': 'RIGHT', 'DOWN': 'LEFT', 'LEFT': 'DOWN', 'RIGHT': 'TIMEOUT'}
+printed RIGHT (retry) -> DOWN

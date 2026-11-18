@@ -1,0 +1,576 @@
+
+######################################################################
+# STEP 0/5  prerequisites: frozen artifacts + board identity
+######################################################################
+frozen model dt-adfe15c9f6, firmware build stamps ['Nov 18 2026 15:53:39']; board: #VER,fw=SmartItemGuardian,version=1.0.0,built=Nov 18 2026 15:53:39,model=dt-adfe15c9f6,placeholder=0,model_bytes=55,nodes=5,depth=2,freertos=V10.3.1,hal=0x01080300
+
+######################################################################
+# STEP 1/5  button check (board in front of you, printed key words readable)
+######################################################################
+Hold the board so you can read the printed words next to the four keys.
+
+KEY 1/4: press the key whose PRINTED word is UP (once).
+   Which PRINTED word is next to the key you pressed? u=UP d=DOWN l=LEFT r=RIGHT x=pressed nothing [u/d/l/r/x]    requested UP     you pressed UP     firmware saw UP      -> match
+
+KEY 2/4: press the key whose PRINTED word is DOWN (once).
+   Which PRINTED word is next to the key you pressed? u=UP d=DOWN l=LEFT r=RIGHT x=pressed nothing [u/d/l/r/x]    requested DOWN   you pressed DOWN   firmware saw DOWN    -> match
+
+KEY 3/4: press the key whose PRINTED word is LEFT (once).
+   Which PRINTED word is next to the key you pressed? u=UP d=DOWN l=LEFT r=RIGHT x=pressed nothing [u/d/l/r/x]    requested LEFT   you pressed LEFT   firmware saw LEFT    -> match
+
+KEY 4/4: press the key whose PRINTED word is RIGHT (once).
+   Which PRINTED word is next to the key you pressed? u=UP d=DOWN l=LEFT r=RIGHT x=pressed nothing [u/d/l/r/x]    requested RIGHT  you pressed RIGHT  firmware saw RIGHT   -> match
+printed -> firmware for pressed keys: {'UP': 'UP', 'DOWN': 'DOWN', 'LEFT': 'LEFT', 'RIGHT': 'RIGHT'}
+result: **PASS - mapping correct**
+
+KEY CHEAT SHEET for the final test (firmware name -> key with this PRINTED word):
+   firmware UP    -> printed UP
+   firmware DOWN  -> printed DOWN
+   firmware LEFT  -> printed LEFT
+   firmware RIGHT -> printed RIGHT
+The final test names the PRINTED key wherever it differs.
+
+######################################################################
+# STEP 2/5  proximity calibration (touchless acknowledgement)
+######################################################################
+Find the AP3216C light/proximity sensor on the board (small dark window; check the silkscreen).
+Board on the table, LCD up, cable slack. HANDS AWAY from the board. Ready? [y]    hands away: {'n': 10, 'valid': 10, 'min': 0, 'max': 1023, 'median': 2.5}
+HOLD one hand 2-5 cm over the sensor and keep it there; type y with the other hand [y] HOLD one hand 2-5 cm over the sensor and keep it there; type y with the other hand [y]    hand near:  {'n': 10, 'valid': 10, 'min': 1023, 'max': 1023, 'median': 1023.0}
+Take your hand away. Ready for the calibration wizard? [y]    >>> CALIBRATION: keep hands AWAY for about 6 s. At the tick beep the LCD says 'HAND OVER SENSOR': hold your hand 2-5 cm over the sensor until the confirmation beep (about 6 s).
+   #CAL,prox,fail_low_contrast,far_n=16,far_mean=2,far_min=0,far_max=11,near_n=16,near_min=0,near_mean=2,near_max=10,thr_far=0,thr_near=0,calibrated=0
+Calibration failed. Hand closer (2-3 cm), no direct sunlight/lamp into the sensor - repeat once? [y/n]    >>> CALIBRATION: keep hands AWAY for about 6 s. At the tick beep the LCD says 'HAND OVER SENSOR': hold your hand 2-5 cm over the sensor until the confirmation beep (about 6 s).
+   #CAL,prox,ok,far_n=16,far_mean=2,far_min=0,far_max=10,near_n=16,near_min=1023,near_mean=1023,near_max=1023,thr_far=263,thr_near=516,calibrated=1
+result: PASS -> evidence\hardware\prox_check_20261118T081020Z
+
+proximity calibration: PASS
+
+######################################################################
+# STEP 3/5  network OFF
+######################################################################
+Now switch this PC to AIRPLANE MODE (or unplug the network cable and turn Wi-Fi off).
+The Claude connection will drop - that is expected. Everything from here runs locally.
+Keep this terminal open. Do not close VS Code.
+adapter statuses: ['Up', 'Up']
+
+######################################################################
+# STEP 4/5  FINAL TEST (~35-45 min, offline). Follow the LCD and type here.
+######################################################################
+Handheld: STILL = board on the table, hands off; NORMAL = hold it, lift/carry/turn calmly;
+ROUGH = hold FIRMLY with both hands, shake + jerk, NEVER drop or hit it. Keep the USB cable slack.
+Proximity checks: board on the table, use your free hand over the sensor as the terminal says.
+In the fault test, press the keys the terminal names.
+PC network OFF / airplane mode? (the board has no network) [y/n/s] 
+P1: 60 product trials, board held in the hand (no enclosure). Between trials put the board down.
+
+[1/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 1/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 1/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 13, 'ROUGH': 0}  alert=False  OK
+
+[2/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 2/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 2/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 7, 'ROUGH': 6}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[3/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 3/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 3/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[4/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 4/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 4/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 13, 'ROUGH': 0}  alert=False  OK
+
+[5/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 5/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 5/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 8, 'ROUGH': 5}  alert=False  OK
+
+[6/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 6/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 6/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 14 {'STILL': 2, 'NORMAL': 12, 'ROUGH': 0}  alert=False  OK
+
+[7/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 7/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 7/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 10, 'ROUGH': 3}  alert=False  OK
+
+[8/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 8/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 8/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[9/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 9/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 9/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 9, 'NORMAL': 4, 'ROUGH': 0}  alert=False  OK
+
+[10/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 10/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 10/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 11, 'NORMAL': 2, 'ROUGH': 0}  alert=False  OK
+
+[11/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 11/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Short rest. Trials 11-20 of 60 follow
+[operator] Trial 11/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 14 {'STILL': 14, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[12/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 12/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 12/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[13/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 13/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 13/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 4, 'ROUGH': 9}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[14/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 14/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 14/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 4, 'NORMAL': 9, 'ROUGH': 0}  alert=False  OK
+
+[15/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 15/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 15/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 3, 'ROUGH': 10}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[16/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 16/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 16/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 9, 'ROUGH': 4}  alert=False  OK
+
+[17/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 17/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 17/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[18/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 18/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 18/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 1, 'NORMAL': 12, 'ROUGH': 0}  alert=False  OK
+
+[19/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 19/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 19/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[20/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 20/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 20/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[21/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 21/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Short rest. Trials 21-30 of 60 follow
+[operator] Trial 21/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[22/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 22/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 22/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[23/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 23/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 23/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[24/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 24/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 24/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 13, 'ROUGH': 0}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[25/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 25/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 25/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 2, 'NORMAL': 11, 'ROUGH': 0}  alert=False  OK
+
+[26/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 26/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 26/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=False  OK
+
+[27/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 27/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 27/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 3, 'NORMAL': 10, 'ROUGH': 0}  alert=False  OK
+
+[28/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 28/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 28/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 14 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 14}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[29/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 29/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 29/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 7, 'NORMAL': 1, 'ROUGH': 5}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[30/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 30/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 30/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[31/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 31/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Short rest. Trials 31-40 of 60 follow
+[operator] Trial 31/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[32/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 32/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 32/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[33/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 33/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 33/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 12, 'ROUGH': 1}  alert=True  MISS
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[34/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 34/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 34/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[35/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 35/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 35/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[36/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 36/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 36/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 1, 'NORMAL': 11, 'ROUGH': 1}  alert=True  MISS
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[37/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 37/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 37/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[38/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 38/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 38/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[39/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 39/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 39/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 14 {'STILL': 14, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[40/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 40/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 40/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 13, 'ROUGH': 0}  alert=False  OK
+
+[41/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 41/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Short rest. Trials 41-50 of 60 follow
+[operator] Trial 41/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[42/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 42/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 42/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[43/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 43/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 43/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[44/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 44/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 44/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 7, 'NORMAL': 2, 'ROUGH': 4}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[45/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 45/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 45/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[46/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 46/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 46/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 0, 'ROUGH': 13}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[47/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 47/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 47/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 13, 'ROUGH': 0}  alert=False  OK
+
+[48/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 48/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 48/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[49/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 49/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 49/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 4, 'NORMAL': 9, 'ROUGH': 0}  alert=False  OK
+
+[50/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 50/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 50/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 2, 'NORMAL': 11, 'ROUGH': 0}  alert=False  OK
+
+[51/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 51/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Short rest. Trials 51-60 of 60 follow
+[operator] Trial 51/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  MISS
+
+[52/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 52/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 52/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[53/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 53/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 53/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 14 {'STILL': 0, 'NORMAL': 14, 'ROUGH': 0}  alert=False  OK
+
+[54/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 54/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 54/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 13, 'ROUGH': 0}  alert=False  OK
+
+[55/60] ROUGH_HANDLING: hold FIRMLY with both hands and shake vigorously / jerk-stop (never drop or strike) for 8 s
+[operator] Type y on PC. NEXT: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+trial 55/60 ROUGH_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 55/60 GET READY: ROUGH: hold FIRMLY, shake + jerk. NEVER drop/hit.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 3, 'ROUGH': 10}  alert=True  OK
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[56/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 56/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 56/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[57/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 57/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 57/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 13, 'ROUGH': 0}  alert=False  OK
+
+[58/60] STATIONARY: put the board down on the table and take your hands off for 8 s
+[operator] Type y on PC. NEXT: HANDS OFF: board on the table.
+trial 58/60 STATIONARY: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 58/60 GET READY: HANDS OFF: board on the table.
+   -> predicted STATIONARY  windows 13 {'STILL': 13, 'NORMAL': 0, 'ROUGH': 0}  alert=False  OK
+
+[59/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 59/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 59/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted ROUGH_HANDLING  windows 13 {'STILL': 0, 'NORMAL': 12, 'ROUGH': 1}  alert=True  MISS
+   (alert acknowledged automatically through the console - no key needed)
+[operator] Put the board down and keep it still
+
+[60/60] NORMAL_HANDLING: hold the board, lift, carry, turn and set it down calmly (no jerks) for 8 s
+[operator] Type y on PC. NEXT: NORMAL: lift, carry, set down CALMLY.
+trial 60/60 NORMAL_HANDLING: ready?
+  Type y when ready (n = do not start) [y/n] [operator] Trial 60/60 GET READY: NORMAL: lift, carry, set down CALMLY.
+   -> predicted NORMAL_HANDLING  windows 14 {'STILL': 0, 'NORMAL': 14, 'ROUGH': 0}  alert=False  OK
+
+P2: touchless acknowledgement. Put the board on the table, LCD up; use your free hand.
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[1/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [1/10] HOLD HAND over the sensor now (1 s), then take it away
+   [1/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 3.61 s  ['#PROX,gesture,ack,ps=1023,t_us=2210612552']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[2/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [2/10] HOLD HAND over the sensor now (1 s), then take it away
+   [2/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 1.19 s  ['#PROX,gesture,ack,ps=1023,t_us=2217812422']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[3/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [3/10] HOLD HAND over the sensor now (1 s), then take it away
+   [3/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 0.42 s  ['#PROX,gesture,ack,ps=1023,t_us=2225012291']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[4/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [4/10] HOLD HAND over the sensor now (1 s), then take it away
+   [4/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 0.00 s  ['#PROX,gesture,ack,ps=1023,t_us=2230212198']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[5/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [5/10] HOLD HAND over the sensor now (1 s), then take it away
+   [5/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 1.19 s  ['#PROX,gesture,ack,ps=1023,t_us=2236612080']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[6/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [6/10] HOLD HAND over the sensor now (1 s), then take it away
+   [6/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 1.17 s  ['#PROX,gesture,ack,ps=1023,t_us=2242411981']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[7/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [7/10] HOLD HAND over the sensor now (1 s), then take it away
+   [7/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 1.17 s  ['#PROX,gesture,ack,ps=1023,t_us=2248211887']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[8/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [8/10] HOLD HAND over the sensor now (1 s), then take it away
+   [8/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 0.94 s  ['#PROX,gesture,ack,ps=1023,t_us=2255011780']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[9/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [9/10] HOLD HAND over the sensor now (1 s), then take it away
+   [9/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 1.49 s  ['#PROX,gesture,ack,ps=1023,t_us=2263411644']
+[operator] Type y on PC. Then: hand away, wait for beep, HOLD hand over sensor
+[10/10] gesture check: keep your hand away now. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] [10/10] HOLD HAND over the sensor now (1 s), then take it away
+   [10/10] >>> HOLD your hand over the sensor now (about 1 s), then take it away
+      ACKNOWLEDGED by gesture in 1.28 s  ['#PROX,gesture,ack,ps=1023,t_us=2269811540']
+[operator] Type y on PC. Then HOLD hand over sensor and KEEP it there 12 s
+SUSTAINED-NEAR check: put your hand over the sensor now and KEEP it there until told. Ready?
+  Type y when ready (n = do not start) [y/n] [operator] KEEP your hand over the sensor until the stop beep
+   >>> keep your hand over the sensor (about 12 s, until the stop beep)
+      prox acknowledgements while the hand stayed near: 0 (expected 0); gesture lines ['#PROX,gesture,alert_too_new,ps=1023,t_us=2276611434']
+[operator] Take your hand AWAY now
+   >>> take your hand away
+[operator] Hands AWAY from the board for 15 s
+   >>> hands away from the board for 15 s
+
+P3: controlled failure - IMU reads will be forced to fail for 20 s.
+    During the fault press LEFT twice and DOWN once on the board.
+[operator] FAULT TEST: board on table. Press LEFT twice, then DOWN once
+    Did the LCD show FAULT / SENSOR FAULT and the buzzer sound during the fault? [y/n/s] Is the PC network still OFF? [y/n/s] # Final acceptance run
+
+Firmware: dt-adfe15c9f6 (placeholder=0)
+
+Set-up: handheld prototype: bare RT-Spark board, no enclosure, not mounted to an item
+
+| id | requirement | status | evidence |
+|---|---|---|---|
+| R1 | >= 20 independent product trials per class | PASS | {'STATIONARY': 20, 'NORMAL_HANDLING': 20, 'ROUGH_HANDLING': 20} accuracy 0.933 |
+| R2 | >= 50 timed on-board inferences (median, p95) | PASS | n=3021 median=286.12 us p95=287.81 us |
+| R3 | sampling-to-response delay measured | PASS | sample->alert median 868.0 us p95 870 us; sample->decision median 710 us |
+| R4 | >= 15 min continuous operation, no reset | PASS | 25.6 min, boots during run 0, stalls 0, missed samples 0, invalid 2111, log drops 0 |
+| R5 | >= 5 consecutive minutes offline inference | PASS | longest uninterrupted inference stretch 24.7 min; operator network-off attestation True/True; host adapters all down start/end False/False |
+| R6 | controlled failure with responsive scheduling and user feedback | PASS | {"fault_raised": true, "fault_raise_latency_s": 0.109, "status_commands_answered_during_fault": 10, "valid_predictions_during_fault": 0, "key_events_during_fault": 4, "fault_cleared": true, "valid_inference_resumed_after |
+| R7 | exported model executes correctly on STM32 (golden held-out windows) | PASS | {"count": "30", "python_target_agree": "30", "target_correct": "24", "features_bit_exact": "30", "worst_feat_abs_diff": "0.000000", "cycles_min": "49562", "cycles_mean": "49653", "cycles_max": "49835", "us_mean": "295"} |
+| R8 | touchless acknowledgement: >= 90 % of deliberate gestures, none while a hand stays near, none with hands away | PASS | 10/10 gestures acknowledged (median cue->ack 1.19 s); prox acks while hand held near 0; gestures with hands away 0; gestures during P1 handling [] |
+| R9 | module diagnostics in the same firmware | PASS | 10 PASS / 0 FAIL / 0 WARN |
+| R10 | heap / stack diagnostics recorded | PASS | heap min free 18192 B, stack HWM (words) {'sensor': 242, 'infer': 736, 'ui': 741, 'health': 572, 'console': 612} |
+| R11 | integrated module functions during the run (microSD log, IR relay, wired) | INFO | microSD lines written 0 (mounted 0); IR tx_frames 76 rx_frames 76 relay 1; wire end #WIRE,can=0,can_tx_ok=0,can_tx_fail=0,can_ack_err=0,can_busy=0,tec=0,rec=0,lec=0,err_passive=0,bus_off=0,rs485=0,rs485_lines=0,rs485_rx_ |
+
+## Trial-level confusion (rows = expected)
+
+| expected | STILL | NORMAL | ROUGH | NO_DECISION |
+|---|---|---|---|---|
+| STILL | 20 | 0 | 0 | 0 |
+| NORMAL | 1 | 16 | 3 | 0 |
+| ROUGH | 0 | 0 | 20 | 0 |
+
+| class | precision | recall |
+|---|---|---|
+| STATIONARY | 0.952 | 1.000 |
+| NORMAL_HANDLING | 1.000 | 0.800 |
+| ROUGH_HANDLING | 0.870 | 1.000 |
+
+written: evidence\hardware\final_20261118T081218Z
+
+######################################################################
+# STEP 5/5  DONE - all tools have closed the serial port
+######################################################################
+final test exit code 0; evidence: evidence\hardware\final_20261118T081218Z
+You may now RECONNECT the network (turn airplane mode off) and tell the assistant 'final session done'.
+Leave the board powered until the assistant confirms the evidence is complete.
+runner log: evidence\hardware\gate2_20261118T080936Z\runner.log

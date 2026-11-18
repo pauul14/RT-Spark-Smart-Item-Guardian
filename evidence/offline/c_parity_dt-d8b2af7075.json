@@ -1,0 +1,613 @@
+{
+ "summary": {
+  "model_id": "dt-d8b2af7075",
+  "placeholder": false,
+  "windows": 66,
+  "windows_from": "evaluation sessions of train.py (heldout_windows.jsonl)",
+  "prediction_agreement": 66,
+  "features_bit_exact": 66,
+  "baseline_agreement": 66,
+  "all_match": true,
+  "host_compiler": "gcc.exe (i686-posix-dwarf-rev0, Built by MinGW-W64 project) 5.1.0",
+  "host_cflags": "-std=gnu11 -O2 -Wall -Wextra -ffp-contract=off -fno-math-errno -fexcess-precision=standard -msse2 -mfpmath=sse -static",
+  "harness_header": "# model=dt-d8b2af7075 placeholder=0 nodes=15 depth=4 model_bytes=165",
+  "compiler_warnings": "",
+  "mismatches": []
+ },
+ "windows": [
+  {
+   "id": "S04/NORMAL_HANDLING_01/w0",
+   "label": "NORMAL_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w1",
+   "label": "NORMAL_HANDLING",
+   "python": "NORMAL_HANDLING",
+   "c": "NORMAL_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w2",
+   "label": "NORMAL_HANDLING",
+   "python": "NORMAL_HANDLING",
+   "c": "NORMAL_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w3",
+   "label": "NORMAL_HANDLING",
+   "python": "NORMAL_HANDLING",
+   "c": "NORMAL_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w4",
+   "label": "NORMAL_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w5",
+   "label": "NORMAL_HANDLING",
+   "python": "NORMAL_HANDLING",
+   "c": "NORMAL_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w6",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w7",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w8",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w9",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_01/w10",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w0",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w1",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w2",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w3",
+   "label": "NORMAL_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w4",
+   "label": "NORMAL_HANDLING",
+   "python": "NORMAL_HANDLING",
+   "c": "NORMAL_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w5",
+   "label": "NORMAL_HANDLING",
+   "python": "NORMAL_HANDLING",
+   "c": "NORMAL_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w6",
+   "label": "NORMAL_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w7",
+   "label": "NORMAL_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w8",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w9",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/NORMAL_HANDLING_02/w10",
+   "label": "NORMAL_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w0",
+   "label": "ROUGH_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w1",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w2",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w3",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w4",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w5",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w6",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w7",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w8",
+   "label": "ROUGH_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w9",
+   "label": "ROUGH_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_01/w10",
+   "label": "ROUGH_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w0",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w1",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w2",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w3",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w4",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w5",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w6",
+   "label": "ROUGH_HANDLING",
+   "python": "ROUGH_HANDLING",
+   "c": "ROUGH_HANDLING",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w7",
+   "label": "ROUGH_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w8",
+   "label": "ROUGH_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w9",
+   "label": "ROUGH_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/ROUGH_HANDLING_02/w10",
+   "label": "ROUGH_HANDLING",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w0",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w1",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w2",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w3",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w4",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w5",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w6",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w7",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w8",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w9",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_01/w10",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w0",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w1",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w2",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w3",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w4",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w5",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w6",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w7",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w8",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w9",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  },
+  {
+   "id": "S04/STATIONARY_02/w10",
+   "label": "STATIONARY",
+   "python": "STATIONARY",
+   "c": "STATIONARY",
+   "features_bit_exact": true,
+   "baseline_match": true,
+   "ok": true
+  }
+ ]
+}

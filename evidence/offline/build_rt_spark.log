@@ -1,0 +1,34 @@
+Processing rt_spark (platform: ststm32@19.7.1; framework: stm32cube; board: rt_spark_f407zg)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/ststm32/rt_spark_f407zg.html
+PLATFORM: ST STM32 (19.7.1) > RT-Thread RT-Spark (Spark-1, HW1.1) STM32F407ZGT6
+HARDWARE: STM32F407ZGT6 168MHz, 128KB RAM, 1MB Flash
+DEBUG: Current (stlink) On-board (stlink)
+PACKAGES: 
+ - framework-stm32cubef4 @ 1.28.1 
+ - tool-ldscripts-ststm32 @ 0.2.0 
+ - toolchain-gccarmnoneeabi @ 1.70201.0 (7.2.1)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain+, Compatibility ~ soft
+Found 61 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- FreeRTOS-Kernel @ 10.3.1
+|-- FatFs @ 0.12.3
+Building in release mode
+Linking .pio\build\rt_spark\firmware.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      166500 B         1 MB     15.88%
+             RAM:       26448 B       128 KB     20.18%
+          CCMRAM:         48 KB        64 KB     75.00%
+Checking size .pio\build\rt_spark\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  17.1% (used 22348 bytes from 131072 bytes)
+Flash: [==        ]  15.8% (used 166084 bytes from 1048576 bytes)
+========================= [SUCCESS] Took 6.93 seconds =========================
+
+Environment    Status    Duration
+-------------  --------  ------------
+rt_spark       SUCCESS   00:00:06.931
+========================= 1 succeeded in 00:00:06.931 =========================
